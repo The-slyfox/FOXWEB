@@ -2,6 +2,9 @@
 originals/
 assets/originals/
 
+# reportes internos de /impeccable — no son parte del sitio
+.impeccable/
+
 # sistema
 .DS_Store
 Thumbs.db

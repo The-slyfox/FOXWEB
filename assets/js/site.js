@@ -572,7 +572,10 @@
       trailerLink.textContent = t(watchKey);
     }
 
-    /* carrusel: trailer primero, luego stills */
+    /* carrusel del hero: trailer + stills juntos, como siempre —
+       esto es lo que ve desktop. En mobile, un CSS aparte oculta acá
+       las stills (deja sólo el trailer) porque ahí se muestran en su
+       propia sección más abajo, después de festivales. */
     var car = $('#carrusel');
     if (car) {
       car.innerHTML = '';
@@ -594,9 +597,7 @@
         if (trailerLink) {
           trailerLink.addEventListener('click', function (e) {
             e.preventDefault();
-            car.scrollTo({ left: 0, behavior: 'smooth' });
-            tr.click();
-            tr.focus();
+            playTrailer();
           });
         }
       } else {
@@ -610,20 +611,20 @@
         p.stills.forEach(function (src) {
           var b = document.createElement('button');
           b.type = 'button';
-          b.className = 'ccard';
+          b.className = 'ccard ccard-still';
           b.innerHTML = '<img loading="lazy" src="' + esc(src) + '" alt="">';
           b.addEventListener('click', function () { openLightbox(src, ''); });
           car.appendChild(b);
         });
       } else {
         var s = document.createElement('div');
-        s.className = 'ccard is-pending';
+        s.className = 'ccard ccard-still is-pending';
         s.textContent = t('p.stills');
         car.appendChild(s);
       }
     }
 
-    /* flechas */
+    /* flechas del hero */
     $$('#projNav button').forEach(function (b) {
       b.addEventListener('click', function () {
         var card = $('.ccard', car);
@@ -631,6 +632,36 @@
         car.scrollBy({ left: b.dataset.dir === 'next' ? step : -step, behavior: 'smooth' });
       });
     });
+
+    /* misma lista de stills, de nuevo, para la sección propia que
+       sólo se ve en mobile (después de festivales) — .has-stills
+       controla si esa sección se muestra ahí; en desktop queda
+       oculta siempre por CSS, sin importar esta clase */
+    var stillsSec = $('#stillsSec');
+    var stillsCar = $('#stillsCarrusel');
+    if (stillsCar) {
+      stillsCar.innerHTML = '';
+      if (p.stills.length) {
+        if (stillsSec) stillsSec.classList.add('has-stills');
+        p.stills.forEach(function (src) {
+          var b = document.createElement('button');
+          b.type = 'button';
+          b.className = 'ccard';
+          b.innerHTML = '<img loading="lazy" src="' + esc(src) + '" alt="">';
+          b.addEventListener('click', function () { openLightbox(src, ''); });
+          stillsCar.appendChild(b);
+        });
+        $$('#stillsNav button').forEach(function (b) {
+          b.addEventListener('click', function () {
+            var card = $('.ccard', stillsCar);
+            var step = card ? card.getBoundingClientRect().width + 14 : 280;
+            stillsCar.scrollBy({ left: b.dataset.dir === 'next' ? step : -step, behavior: 'smooth' });
+          });
+        });
+      } else if (stillsSec) {
+        stillsSec.classList.remove('has-stills');
+      }
+    }
 
     /* festivales: lista de texto, crece sin límite — si no hay
        recorrido todavía, se quita la sección entera (nada de

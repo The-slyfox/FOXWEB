@@ -44,6 +44,7 @@ window.I18N = {
     'home.cine':      'Cine',
     'home.cine.sub':  'Cinematografía & Fotografía',
     'home.hint':      'Pasá el cursor sobre un lado',
+    'home.hint.mobile': 'El video se reproduce al hacer scroll',
     'home.role.post': 'Colorista y Editor',
     'home.role.cine': 'Cinematógrafo',
 
@@ -89,6 +90,7 @@ window.I18N = {
     'sec.sinopsis':   'Sinopsis',
     'sec.ficha':      'Ficha técnica',
     'sec.festivales': 'Recorrido en festivales',
+    'sec.stills':     'Stills',
     'sec.otros':      'Otros trabajos narrativos',
     'sec.oficial':    'Selección oficial',
     'sec.competicion':'Competición oficial',
@@ -200,6 +202,7 @@ window.I18N = {
     'home.cine':      'Film',
     'home.cine.sub':  'Cinematography & Photography',
     'home.hint':      'Hover over one side',
+    'home.hint.mobile': 'Video plays as you scroll past',
     'home.role.post': 'Colorist and Editor',
     'home.role.cine': 'Cinematographer',
 
@@ -240,6 +243,7 @@ window.I18N = {
     'sec.sinopsis':   'Synopsis',
     'sec.ficha':      'Credits',
     'sec.festivales': 'Festival run',
+    'sec.stills':     'Stills',
     'sec.otros':      'Other narrative work',
     'sec.oficial':    'Official selection',
     'sec.competicion':'Official competition',

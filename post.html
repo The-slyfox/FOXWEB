@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Post — Jose Gutierrez-Moyano</title>
+<meta name="description" content="Color y edición: corrección de color, montaje y cortometrajes editados.">
+<link rel="icon" href="assets/img/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/site.css">
+</head>
+<body class="page">
+
+<header class="site-nav is-solid">
+  <nav class="nav-group left">
+    <a href="index.html" data-i18n="nav.volver">← Home</a>
+    <a href="cine.html" data-i18n="nav.cine">Cine</a>
+    <a href="post.html" aria-current="page" data-i18n="nav.post">Post</a>
+  </nav>
+
+  <img class="nav-logo" src="assets/img/logo.png" alt="Jose Gutierrez-Moyano">
+
+  <button class="nav-toggle" aria-expanded="false" data-i18n-label="nav.menu">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+  </button>
+
+  <nav class="nav-group right">
+    <a href="sobre.html" data-i18n="nav.sobre">Sobre mí</a>
+    <a href="contacto.html" data-i18n="nav.contacto">Contacto</a>
+    <span class="lang">
+      <button type="button" data-lang="es" aria-pressed="true">ES</button>
+      <span class="sep">|</span>
+      <button type="button" data-lang="en" aria-pressed="false">EN</button>
+    </span>
+  </nav>
+</header>
+
+<main class="wrap">
+
+  <section class="page-head">
+    <h1 class="page-title" data-i18n="post.title">Postproducción</h1>
+    <p class="page-intro" data-i18n="post.intro">Montaje, ritmo y color grading con precisión técnica y narrativa.</p>
+  </section>
+
+  <!-- ============ COLOR ============ -->
+  <section class="sec">
+    <h2 class="sec-title" data-i18n="sec.color">Color</h2>
+    <div id="postColorBig"></div>
+    <div class="color-carousel" id="postColorRow"></div>
+    <div class="carousel-nav" id="colorNav">
+      <button type="button" data-dir="prev" aria-label="Anterior">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg>
+      </button>
+      <button type="button" data-dir="next" aria-label="Siguiente">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg>
+      </button>
+    </div>
+  </section>
+
+  <!-- ============ NARRATIVOS EDITADOS ============ -->
+  <section class="sec">
+    <h2 class="sec-title" data-i18n="sec.cortos">Narrativos</h2>
+    <div class="shorts" id="postCortos"></div>
+  </section>
+
+  <!-- ============ MUSICAL / MODA + COMERCIAL (sólo lo que Jose editó) ============ -->
+  <div id="postSecciones"></div>
+
+  <!-- ============ DIGITAL · SOCIAL MEDIA ============ -->
+  <section class="sec">
+    <h2 class="sec-title" data-i18n="sec.digital">Digital · social media</h2>
+    <div class="strip strip-2row" id="postDigital"></div>
+  </section>
+
+  <a class="cta" href="contacto.html">
+    <span data-i18n="cta.contacto">Contacto</span>
+    <span aria-hidden="true">→</span>
+  </a>
+
+</main>
+
+<footer class="site-foot">
+  <span class="who">Jose Gutierrez-Moyano</span>
+  <span data-i18n="foot.role">Cinematógrafo · Fotógrafo · Editor · Colorista</span>
+  <span class="right">
+    <a href="https://www.imdb.com/es-es/name/nm10852021/" target="_blank" rel="noopener">IMDb</a>
+    <span>© <span id="year">2026</span></span>
+  </span>
+</footer>
+
+<script src="assets/js/i18n.js"></script>
+<script src="assets/js/data.js"></script>
+<script src="assets/js/site.js"></script>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

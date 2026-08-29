@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jose Gutierrez-Moyano</title>
+<meta name="description" content="Cinematógrafo, fotógrafo, editor y colorista. Cine y post.">
+<link rel="icon" href="assets/img/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/site.css">
+</head>
+<body class="home">
+
+<!-- ============ NAV ============ -->
+<header class="site-nav">
+  <nav class="nav-group left">
+    <a href="cine.html" data-i18n="nav.cine">Cine</a>
+    <a href="post.html" data-i18n="nav.post">Post</a>
+    <a href="sobre.html" data-i18n="nav.sobre">Sobre mí</a>
+  </nav>
+
+  <button class="nav-toggle" aria-expanded="false" data-i18n-label="nav.menu">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+  </button>
+
+  <nav class="nav-group right">
+    <a href="contacto.html" data-i18n="nav.contacto">Contacto</a>
+    <a class="imdb" href="https://www.imdb.com/es-es/name/nm10852021/" target="_blank" rel="noopener">IMDb</a>
+    <span class="lang">
+      <button type="button" data-lang="es" aria-pressed="true">ES</button>
+      <span class="sep">|</span>
+      <button type="button" data-lang="en" aria-pressed="false">EN</button>
+    </span>
+  </nav>
+</header>
+
+<!-- El logo grande del medio (más abajo) ya cumple esa función acá —
+     en Home no se repite en la barra de navegación. -->
+
+<!-- ============ LAS DOS PUERTAS ============ -->
+<main class="doors" id="doors">
+
+  <a class="door door-post" href="post.html">
+    <img class="door-still" alt="" aria-hidden="true">
+    <span class="door-video"></span>
+    <span class="door-label">
+      <span class="door-name" data-i18n="home.post">Post</span>
+      <span class="door-sub" data-i18n="home.post.sub">Color &amp; Edición</span>
+    </span>
+  </a>
+
+  <a class="door door-cine" href="cine.html">
+    <img class="door-still" alt="" aria-hidden="true">
+    <span class="door-video"></span>
+    <span class="door-label">
+      <span class="door-name" data-i18n="home.cine">Cine</span>
+      <span class="door-sub" data-i18n="home.cine.sub">Cinematografía &amp; Fotografía</span>
+    </span>
+  </a>
+
+  <span class="door-axis" aria-hidden="true"></span>
+
+  <div class="door-mark">
+    <img src="assets/img/logo.png" alt="">
+    <div class="who">Jose Gutierrez-Moyano</div>
+    <div class="role" data-i18n="foot.role">Cinematógrafo · Fotógrafo · Editor · Colorista</div>
+  </div>
+
+</main>
+
+<!-- ============ PIE ============ -->
+<footer class="home-foot">
+  <a href="sobre.html" data-i18n="nav.sobre">Sobre mí</a>
+  <a href="contacto.html" data-i18n="nav.contacto">Contacto</a>
+  <a href="https://www.imdb.com/es-es/name/nm10852021/" target="_blank" rel="noopener">IMDb</a>
+  <span class="right" data-i18n="home.hint">Pasá el cursor sobre un lado</span>
+</footer>
+
+<script src="assets/js/i18n.js"></script>
+<script src="assets/js/data.js"></script>
+<script src="assets/js/site.js"></script>
+</body>
+</html>

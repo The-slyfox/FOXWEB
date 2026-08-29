@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sobre mí — Jose Gutierrez-Moyano</title>
+<meta name="description" content="Cinematógrafo y editor con base en Ciudad de México. Cine narrativo, publicidad y posproducción — Vancouver Film School.">
+<link rel="icon" href="assets/img/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/site.css">
+</head>
+<body class="page has-bg">
+
+<img class="page-bg" src="assets/img/about-bg.jpg" alt="">
+<span class="page-bg-veil" aria-hidden="true"></span>
+
+<header class="site-nav is-solid">
+  <nav class="nav-group left">
+    <a href="index.html" data-i18n="nav.volver">← Home</a>
+    <a href="cine.html" data-i18n="nav.cine">Cine</a>
+    <a href="post.html" data-i18n="nav.post">Post</a>
+  </nav>
+
+  <img class="nav-logo" src="assets/img/logo.png" alt="Jose Gutierrez-Moyano">
+
+  <button class="nav-toggle" aria-expanded="false" data-i18n-label="nav.menu">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+  </button>
+
+  <nav class="nav-group right">
+    <a href="sobre.html" aria-current="page" data-i18n="nav.sobre">Sobre mí</a>
+    <a href="contacto.html" data-i18n="nav.contacto">Contacto</a>
+    <span class="lang">
+      <button type="button" data-lang="es" aria-pressed="true">ES</button>
+      <span class="sep">|</span>
+      <button type="button" data-lang="en" aria-pressed="false">EN</button>
+    </span>
+  </nav>
+</header>
+
+<main class="wrap">
+
+  <section class="page-head">
+    <h1 class="page-title" data-i18n="about.title">Sobre mí</h1>
+    <p class="page-intro" data-i18n="about.intro">Detrás de cámara y en la sala de edición — la misma mirada, dos momentos del mismo proceso.</p>
+  </section>
+
+  <section class="sec">
+    <div class="two-col about-grid about-panel">
+
+      <div>
+        <div class="about-name">Jose Gutierrez-Moyano</div>
+        <div class="about-role" data-i18n="foot.role">Cinematógrafo · Fotógrafo · Editor · Colorista</div>
+      </div>
+
+      <div>
+        <p class="rich" data-i18n="about.p1">Soy cinematógrafo y editor con más de seis años de experiencia en cine narrativo, publicidad y producción audiovisual. Egresado de Vancouver Film School, mi formación conecta el trabajo en set detrás de cámara con la posproducción de alto nivel.</p>
+        <p class="rich" style="margin-top:20px" data-i18n="about.p2">Después de moverme constantemente entre la cámara y la sala de edición —colaborando con productoras como Cine Travieso, Violeta Films y Mainstream Media— abordo la cinematografía desde una mirada editorial: construyo encuadres con intención y un instinto claro para el ritmo, el movimiento y cómo cada toma sirve al corte final.</p>
+        <span class="about-base" data-i18n="about.base">Con base en Ciudad de México · Disponible para proyectos en cualquier parte del mundo.</span>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="sec">
+    <div class="about-panel">
+      <h2 class="sec-title" data-i18n="sec.perfil">Perfil</h2>
+      <div class="ficha ficha-cols">
+        <div><span class="ficha-k" data-i18n="f.rol">Rol</span><span class="ficha-v" data-i18n="about.rolval">Cinematógrafo · Editor</span></div>
+        <div><span class="ficha-k" data-i18n="f.educacion">Educación</span><span class="ficha-v">Vancouver Film School</span></div>
+        <div><span class="ficha-k" data-i18n="f.colaboraciones">Colaboraciones</span><span class="ficha-v">Cine Travieso · Violeta Films · Mainstream Media</span></div>
+        <div><span class="ficha-k" data-i18n="f.base">Base</span><span class="ficha-v" data-i18n="about.baseval">Ciudad de México</span></div>
+        <div><span class="ficha-k" data-i18n="f.disponibilidad">Disponibilidad</span><span class="ficha-v" data-i18n="about.dispval">Proyectos en cualquier parte del mundo</span></div>
+      </div>
+    </div>
+  </section>
+
+  <a class="cta" href="contacto.html">
+    <span data-i18n="cta.contacto">Contacto</span>
+    <span aria-hidden="true">→</span>
+  </a>
+
+</main>
+
+<footer class="site-foot">
+  <span class="who">Jose Gutierrez-Moyano</span>
+  <span data-i18n="foot.role">Cinematógrafo · Fotógrafo · Editor · Colorista</span>
+  <span class="right">
+    <a href="https://www.imdb.com/es-es/name/nm10852021/" target="_blank" rel="noopener">IMDb</a>
+    <span>© <span id="year">2026</span></span>
+  </span>
+</footer>
+
+<script src="assets/js/i18n.js"></script>
+<script src="assets/js/data.js"></script>
+<script src="assets/js/site.js"></script>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

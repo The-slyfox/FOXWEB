@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fotografía — Jose Gutierrez-Moyano</title>
+<meta name="description" content="Retrato, producto y marca, lifestyle y detrás de cámara.">
+<link rel="icon" href="assets/img/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/site.css">
+</head>
+<body class="page">
+
+<header class="site-nav is-solid">
+  <nav class="nav-group left">
+    <a href="cine.html" data-i18n="nav.volver">← Cine</a>
+    <a href="cine.html" data-i18n="nav.cine">Cine</a>
+    <a href="post.html" data-i18n="nav.post">Post</a>
+  </nav>
+
+  <img class="nav-logo" src="assets/img/logo.png" alt="Jose Gutierrez-Moyano">
+
+  <button class="nav-toggle" aria-expanded="false" data-i18n-label="nav.menu">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+  </button>
+
+  <nav class="nav-group right">
+    <a href="sobre.html" data-i18n="nav.sobre">Sobre mí</a>
+    <a href="contacto.html" data-i18n="nav.contacto">Contacto</a>
+    <span class="lang">
+      <button type="button" data-lang="es" aria-pressed="true">ES</button>
+      <span class="sep">|</span>
+      <button type="button" data-lang="en" aria-pressed="false">EN</button>
+    </span>
+  </nav>
+</header>
+
+<main class="wrap">
+
+  <section class="page-head">
+    <h1 class="page-title" data-i18n="foto.title">Fotografía</h1>
+    <p class="page-intro" data-i18n="foto.intro">Retrato, producto y marca, lifestyle y detrás de cámara.</p>
+  </section>
+
+  <section class="sec">
+    <div class="chips" id="fotoChips"></div>
+    <div class="mosaic" id="fotoMosaico"></div>
+    <p class="sec-note" id="fotoNota"></p>
+  </section>
+
+  <a class="cta" href="contacto.html">
+    <span data-i18n="cta.contacto">Contacto</span>
+    <span aria-hidden="true">→</span>
+  </a>
+
+</main>
+
+<footer class="site-foot">
+  <span class="who">Jose Gutierrez-Moyano</span>
+  <span data-i18n="foot.role">Cinematógrafo · Fotógrafo · Editor · Colorista</span>
+  <span class="right">
+    <a href="https://www.imdb.com/es-es/name/nm10852021/" target="_blank" rel="noopener">IMDb</a>
+    <span>© <span id="year">2026</span></span>
+  </span>
+</footer>
+
+<script src="assets/js/i18n.js"></script>
+<script src="assets/js/data.js"></script>
+<script src="assets/js/site.js"></script>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

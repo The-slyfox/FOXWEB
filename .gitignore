@@ -1,0 +1,7 @@
+# backups de originales sin procesar — no hace falta subirlos al sitio
+originals/
+assets/originals/
+
+# sistema
+.DS_Store
+Thumbs.db

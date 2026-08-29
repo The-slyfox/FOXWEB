@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cine — Jose Gutierrez-Moyano</title>
+<meta name="description" content="Cinematografía y fotografía: cortometrajes, comercial, musical, digital y fotografía.">
+<link rel="icon" href="assets/img/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/site.css">
+</head>
+<body class="page">
+
+<header class="site-nav on-dark">
+  <nav class="nav-group left">
+    <a href="index.html" data-i18n="nav.volver">← Home</a>
+    <a href="cine.html" aria-current="page" data-i18n="nav.cine">Cine</a>
+    <a href="post.html" data-i18n="nav.post">Post</a>
+  </nav>
+
+  <img class="nav-logo" src="assets/img/logo.png" alt="Jose Gutierrez-Moyano">
+
+  <button class="nav-toggle" aria-expanded="false" data-i18n-label="nav.menu">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+  </button>
+
+  <nav class="nav-group right">
+    <a href="sobre.html" data-i18n="nav.sobre">Sobre mí</a>
+    <a href="contacto.html" data-i18n="nav.contacto">Contacto</a>
+    <span class="lang">
+      <button type="button" data-lang="es" aria-pressed="true">ES</button>
+      <span class="sep">|</span>
+      <button type="button" data-lang="en" aria-pressed="false">EN</button>
+    </span>
+  </nav>
+</header>
+
+<main>
+
+  <!-- ============ EL REEL ABRE ============ -->
+  <div class="reel" id="reel">
+    <span class="reel-tag">REEL 2025</span>
+    <div class="reel-controls" id="reelControls">
+      <button type="button" class="reel-btn" id="reelPlayToggle" data-i18n-label="reel.pause">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><rect x="6" y="5" width="4" height="14"/><rect x="14" y="5" width="4" height="14"/></svg>
+      </button>
+      <button type="button" class="reel-btn" id="reelMuteToggle" data-i18n-label="reel.unmute">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 9v6h4l5 5V4L8 9H4z" fill="currentColor" stroke="none"/><path d="M17 8a5 5 0 0 1 0 8M20 5a9 9 0 0 1 0 14"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <div class="wrap">
+
+    <section class="sec" style="padding-top:56px">
+      <h1 class="page-title" data-i18n="cine.title">Cinematografía</h1>
+      <p class="page-intro" data-i18n="cine.intro">Composición, luz y movimiento pensados para servir a la historia.</p>
+    </section>
+
+    <!-- ============ NARRATIVOS ============ -->
+    <section class="sec">
+      <h2 class="sec-title" data-i18n="sec.cortos">Narrativos</h2>
+      <div class="shorts" id="cineCortos"></div>
+    </section>
+
+    <!-- ============ MUSICAL / MODA + COMERCIAL ============ -->
+    <div id="cineSecciones"></div>
+
+    <!-- ============ DIGITAL · SOCIAL MEDIA ============ -->
+    <section class="sec">
+      <h2 class="sec-title" data-i18n="sec.digital">Digital · social media</h2>
+      <div class="strip strip-2row" id="cineDigital"></div>
+    </section>
+
+    <!-- ============ VIDEOS DE GRADUACIÓN ============ -->
+    <div id="cineGraduacion"></div>
+
+    <!-- ============ FOTOGRAFÍA ============ -->
+    <section class="sec">
+      <h2 class="sec-title">
+        <span data-i18n="sec.foto">Fotografía</span>
+        <a class="hint" href="fotografia.html" data-i18n="cta.ver">Ver</a>
+      </h2>
+      <div class="cats" id="fotoCats"></div>
+    </section>
+
+    <a class="cta" href="contacto.html">
+      <span data-i18n="cta.contacto">Contacto</span>
+      <span aria-hidden="true">→</span>
+    </a>
+
+  </div>
+</main>
+
+<footer class="site-foot">
+  <span class="who">Jose Gutierrez-Moyano</span>
+  <span data-i18n="foot.role">Cinematógrafo · Fotógrafo · Editor · Colorista</span>
+  <span class="right">
+    <a href="https://www.imdb.com/es-es/name/nm10852021/" target="_blank" rel="noopener">IMDb</a>
+    <span>© <span id="year">2026</span></span>
+  </span>
+</footer>
+
+<script src="https://player.vimeo.com/api/player.js"></script>
+<script src="assets/js/i18n.js"></script>
+<script src="assets/js/data.js"></script>
+<script src="assets/js/site.js"></script>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

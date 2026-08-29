@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contacto — Jose Gutierrez-Moyano</title>
+<meta name="description" content="Contame sobre tu proyecto — cinematografía, edición o color.">
+<link rel="icon" href="assets/img/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/site.css">
+</head>
+<body class="page has-bg">
+
+<img class="page-bg" src="assets/img/contacto-bg.jpg" alt="">
+<span class="page-bg-veil" aria-hidden="true"></span>
+
+<header class="site-nav is-solid">
+  <nav class="nav-group left">
+    <a href="index.html" data-i18n="nav.volver">← Home</a>
+    <a href="cine.html" data-i18n="nav.cine">Cine</a>
+    <a href="post.html" data-i18n="nav.post">Post</a>
+  </nav>
+
+  <img class="nav-logo" src="assets/img/logo.png" alt="Jose Gutierrez-Moyano">
+
+  <button class="nav-toggle" aria-expanded="false" data-i18n-label="nav.menu">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+  </button>
+
+  <nav class="nav-group right">
+    <a href="sobre.html" data-i18n="nav.sobre">Sobre mí</a>
+    <a href="contacto.html" aria-current="page" data-i18n="nav.contacto">Contacto</a>
+    <span class="lang">
+      <button type="button" data-lang="es" aria-pressed="true">ES</button>
+      <span class="sep">|</span>
+      <button type="button" data-lang="en" aria-pressed="false">EN</button>
+    </span>
+  </nav>
+</header>
+
+<main class="wrap">
+
+  <section class="page-head">
+    <h1 class="page-title" data-i18n="contact.title">Contacto</h1>
+    <p class="page-intro" data-i18n="contact.intro">Contame de tu proyecto — cinematografía, edición o color. Te respondo por mail.</p>
+  </section>
+
+  <section class="sec">
+    <div class="contact-grid about-panel">
+
+      <form class="contact-form" id="contactForm" name="contacto" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+        <input type="hidden" name="form-name" value="contacto">
+        <p class="hp-field" aria-hidden="true">
+          <label>No llenar <input name="bot-field" tabindex="-1" autocomplete="off"></label>
+        </p>
+
+        <div class="form-field">
+          <label for="cf-nombre" data-i18n="contact.nombre">Nombre</label>
+          <input id="cf-nombre" name="nombre" type="text" required autocomplete="name">
+        </div>
+
+        <div class="form-field">
+          <label for="cf-email" data-i18n="contact.email">Email</label>
+          <input id="cf-email" name="email" type="email" required autocomplete="email">
+        </div>
+
+        <div class="form-field">
+          <label for="cf-tipo" data-i18n="contact.tipo">Tipo de proyecto</label>
+          <select id="cf-tipo" name="tipo">
+            <option value="cinematografia" data-i18n="contact.tipo.cine">Cinematografía / fotografía</option>
+            <option value="edicion" data-i18n="contact.tipo.edicion">Edición</option>
+            <option value="color" data-i18n="contact.tipo.color">Color</option>
+            <option value="otro" data-i18n="contact.tipo.otro">Otro</option>
+          </select>
+        </div>
+
+        <div class="form-field">
+          <label for="cf-mensaje" data-i18n="contact.mensaje">Contame de tu proyecto</label>
+          <textarea id="cf-mensaje" name="mensaje" required></textarea>
+        </div>
+
+        <button type="submit" class="form-submit">
+          <span data-i18n="contact.enviar">Enviar</span>
+          <span aria-hidden="true">→</span>
+        </button>
+
+        <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+      </form>
+
+      <div class="contact-alt">
+        <h2 class="sec-title" data-i18n="contact.directo">Escribime directo</h2>
+        <a class="contact-mail" href="mailto:jgutimoyan@gmail.com">jgutimoyan@gmail.com</a>
+        <a class="contact-mail" href="mailto:the.slyfox.project@gmail.com">the.slyfox.project@gmail.com</a>
+        <a class="contact-mail" href="https://www.imdb.com/es-es/name/nm10852021/" target="_blank" rel="noopener">IMDb ↗</a>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-foot">
+  <span class="who">Jose Gutierrez-Moyano</span>
+  <span data-i18n="foot.role">Cinematógrafo · Fotógrafo · Editor · Colorista</span>
+  <span class="right">
+    <a href="https://www.imdb.com/es-es/name/nm10852021/" target="_blank" rel="noopener">IMDb</a>
+    <span>© <span id="year">2026</span></span>
+  </span>
+</footer>
+
+<script src="assets/js/i18n.js"></script>
+<script src="assets/js/data.js"></script>
+<script src="assets/js/site.js"></script>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+<script>
+/* Envío por AJAX a Netlify (si el sitio ya está desplegado ahí);
+   si falla (todavía local, o Netlify Forms sin activar) cae a un
+   mailto: con lo que la persona ya escribió, para no perder el mensaje. */
+(function () {
+  var form = document.getElementById('contactForm');
+  var status = document.getElementById('formStatus');
+  if (!form) return;
+
+  function encode(data) {
+    return Object.keys(data).map(function (k) {
+      return encodeURIComponent(k) + '=' + encodeURIComponent(data[k]);
+    }).join('&');
+  }
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var data = Object.fromEntries(new FormData(form).entries());
+
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: encode(data)
+    }).then(function (r) {
+      if (!r.ok) throw new Error('sin Netlify Forms');
+      status.textContent = window.i18n.t('contact.ok');
+      form.reset();
+    }).catch(function () {
+      var subject = 'Proyecto — ' + (data.tipo || '');
+      var body = 'Nombre: ' + data.nombre + '\nEmail: ' + data.email + '\n\n' + data.mensaje;
+      location.href = 'mailto:jgutimoyan@gmail.com,the.slyfox.project@gmail.com' +
+        '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+    });
+  });
+})();
+</script>
+</body>
+</html>

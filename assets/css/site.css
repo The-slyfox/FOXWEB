@@ -728,8 +728,11 @@ body.has-bg .page-intro{ text-shadow:0 2px 14px rgba(0,0,0,.7); }
      resto (laureles, trailer, stills) sigue abajo sobre fondo sólido */
   .proj-still, .proj-veil{
     position:absolute; top:0; left:0; right:0; bottom:auto;
-    height:auto; aspect-ratio:16/9;
+    height:auto; aspect-ratio:16/9; overflow:hidden;
   }
+  .proj-still{ transform:scale(1.12); transform-origin:center; }
+  /* degradado suave hacia el negro de abajo, en vez del corte duro */
+  .proj-veil{ background:linear-gradient(180deg, rgba(5,5,5,0) 55%, #050505 100%); }
 
   /* corto en móvil: título+nombre primero (sobre el fondo), después
      laureles + trailer (el orden -1 de desktop ya pone .proj-id

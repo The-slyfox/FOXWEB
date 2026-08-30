@@ -665,31 +665,42 @@ body.has-bg .page-intro{ text-shadow:0 2px 14px rgba(0,0,0,.7); }
 
   .site-nav{ gap:12px; font-size:10px; letter-spacing:.06em; }
   .site-nav .nav-group{ display:none; }
+  /* los dos <nav> (left/right) se apilan como UN solo bloque centrado,
+     en flujo normal — nada de position:absolute con offsets fijos que
+     se rompen apenas cambia cuántos links tiene cada grupo */
+  .site-nav.is-open{ flex-wrap:wrap; background:rgba(10,10,10,.97); padding-bottom:20px; }
   .site-nav.is-open .nav-group{
-    display:flex; flex-direction:column; align-items:flex-start; gap:16px;
-    position:absolute; left:0; right:0; top:var(--nav-h);
-    padding:22px var(--pad); background:rgba(10,10,10,.97);
-    border-bottom:1px solid var(--line); font-size:13px;
+    display:flex; flex-direction:column; align-items:center; gap:14px;
+    flex-basis:100%; width:100%; position:static;
+    padding:18px var(--pad) 0; font-size:13px; text-align:center;
   }
-  .site-nav.is-open .nav-group.right{ top:calc(var(--nav-h) + 132px); }
+  .site-nav.is-open .nav-group.right{ padding-top:14px; margin-top:4px; border-top:1px solid var(--line); }
   .nav-toggle{
     display:flex; margin-left:auto; width:34px; height:34px;
     align-items:center; justify-content:center;
   }
   .nav-toggle svg{ width:20px; height:20px; }
-  .nav-logo{ left:var(--pad); transform:translateY(-62%); }
+  /* más chico para que no choque con el botón de menú */
+  .nav-logo{ left:var(--pad); width:56px; transform:translateY(-58%); }
 
-  /* home: las mitades se apilan, el video corre en la que entra en pantalla */
-  body.home{ height:auto; overflow:auto; }
-  .doors{ flex-direction:column; }
-  .door,.door-post,.door-cine{ width:100%; height:44vh; min-height:280px; }
+  /* home en mobile: mismo mecanismo que desktop pero en vertical —
+     las puertas se apilan y el logo del medio (ahora arrastrable)
+     hace de manija: subirlo agranda Cine, bajarlo agranda Post */
+  body.home{ height:100vh; overflow:hidden; }
+  .doors{ flex-direction:column; --vsplit:50%; }
+  .door,.door-post,.door-cine{ width:100%; min-height:0; }
+  .door-post{ height:var(--vsplit); }
+  .door-cine{ height:calc(100% - var(--vsplit)); }
   .door + .door{ border-left:0; border-top:1px solid var(--line); }
-  .door.is-closed .door-label{ position:relative; left:auto; top:auto; transform:none; padding-bottom:44px; }
+  .door.is-closed .door-label{ position:relative; left:auto; top:auto; transform:none; padding-bottom:24px; }
   .door.is-closed .door-sub{ display:block; }
-  .door-axis{ display:none; }
-  .door-mark{ position:relative; left:auto; top:auto; transform:none; padding:46px 0 40px; order:-1; }
-  .door-mark img{ width:110px; }
-  .home-foot{ height:auto; padding:20px var(--pad); flex-wrap:wrap; gap:14px; }
+  .door-axis{ top:var(--vsplit); left:0; right:0; bottom:auto; width:100%; height:1px; }
+  .door-mark{
+    left:50%; top:var(--vsplit); padding:20px 28px;
+    pointer-events:auto; touch-action:none; cursor:grab;
+  }
+  .door-mark img{ width:64px; }
+  .home-foot{ height:auto; padding:16px var(--pad); flex-wrap:wrap; gap:14px; }
   .home-foot .hint-desktop{ display:none; }
   .home-foot .hint-mobile{ display:inline; }
 
@@ -702,21 +713,24 @@ body.has-bg .page-intro{ text-shadow:0 2px 14px rgba(0,0,0,.7); }
   .mosaic{ grid-template-columns:repeat(2,1fr); grid-auto-rows:140px; gap:10px; }
   .reel{ max-height:none; }
 
-  /* corto en móvil: el carrusel del hero muestra sólo el trailer —
-     las stills se ven en su propia sección, después de festivales */
+  /* corto en móvil: el carrusel del hero muestra sólo el trailer, bien
+     grande y solo — las stills se ven en su propia sección aparte,
+     que en mobile va pegada acá arriba (no después de festivales) */
   #carrusel .ccard-still{ display:none; }
   #stillsSec.has-stills{ display:block; }
 
-  /* corto en móvil: carrusel arriba, poster y nombre abajo (vuelve a apilarse) */
+  /* corto en móvil: título+nombre primero (sobre el fondo), después
+     laureles + trailer (el orden -1 de desktop ya pone .proj-id
+     primero — antes se pisaba a propósito, ahora se deja igual) */
   .proj{
     min-height:0; padding:calc(var(--nav-h) + 24px) var(--pad) 44px;
-    flex-direction:column; align-items:stretch; gap:32px;
+    flex-direction:column; align-items:stretch; gap:28px;
   }
   .proj-float{ width:100%; max-width:100%; }
-  .ccard{ width:210px; } .ccard.is-trailer{ width:250px; }
+  .ccard{ width:210px; } .ccard.is-trailer{ width:100%; }
   .carousel-nav{ display:none; }
   .laurel-row img{ height:46px; }
-  .proj-id{ order:0; max-width:100%; padding:0; gap:18px; flex-direction:column; align-items:flex-start; }
+  .proj-id{ max-width:100%; padding:0; gap:18px; flex-direction:column; align-items:flex-start; }
   .proj-poster .art{ height:280px; }
   .proj-body{ padding-top:56px; }
   .fest{ grid-template-columns:1fr; gap:4px; }
@@ -729,7 +743,6 @@ body.has-bg .page-intro{ text-shadow:0 2px 14px rgba(0,0,0,.7); }
 
 @media (max-width:430px){
   .mosaic{ grid-auto-rows:120px; }
-  .shorts{ grid-template-columns:1fr; }
 }
 
 @media (prefers-reduced-motion:reduce){

@@ -45,7 +45,7 @@ window.I18N = {
     'home.cine':      'Cine',
     'home.cine.sub':  'Cinematografía & Fotografía',
     'home.hint':      'Pasá el cursor sobre un lado',
-    'home.hint.mobile': 'El video se reproduce al hacer scroll',
+    'home.hint.mobile': 'Arrastrá el logo para ver cada lado',
     'home.role.post': 'Colorista y Editor',
     'home.role.cine': 'Cinematógrafo',
 
@@ -206,7 +206,7 @@ window.I18N = {
     'home.cine':      'Film',
     'home.cine.sub':  'Cinematography & Photography',
     'home.hint':      'Hover over one side',
-    'home.hint.mobile': 'Video plays as you scroll past',
+    'home.hint.mobile': 'Drag the logo to see each side',
     'home.role.post': 'Colorist and Editor',
     'home.role.cine': 'Cinematographer',
 

@@ -172,27 +172,38 @@
     }
     function unmount(door) { $('.door-video', door).innerHTML = ''; }
 
-    function open(side) {
+    /* activar/desactivar un lado — separado de "qué tanto se ve",
+       para poder reusarlo tanto en el hover de desktop (que salta a
+       un split fijo) como en el arrastre continuo de mobile */
+    function activate(side) {
       if (current === side) return;
       current = side;
       var on  = side === 'post' ? post : cine;
       var off = side === 'post' ? cine : post;
-      doors.style.setProperty('--split', side === 'post' ? OPEN : (100 - parseFloat(OPEN)) + '%');
       on.classList.add('is-open');   on.classList.remove('is-closed');
       off.classList.remove('is-open'); off.classList.add('is-closed');
       mount(on, window.PUERTAS[side]);
       unmount(off);
       setRole(side);
     }
-
-    function rest() {
+    function deactivate() {
+      if (!current) return;
       current = null;
-      doors.style.setProperty('--split', REST);
       [post, cine].forEach(function (d) {
         d.classList.remove('is-open', 'is-closed');
         unmount(d);
       });
       setRole(null);
+    }
+
+    function open(side) {
+      doors.style.setProperty('--split', side === 'post' ? OPEN : (100 - parseFloat(OPEN)) + '%');
+      activate(side);
+    }
+    function rest() {
+      doors.style.setProperty('--split', REST);
+      doors.style.setProperty('--vsplit', REST);
+      deactivate();
     }
 
     /* escritorio: manda el cursor */
@@ -206,22 +217,35 @@
     });
     doors.addEventListener('mouseleave', function () { if (!mobile.matches) rest(); });
 
-    /* móvil: no hay cursor — corre el video de la mitad que entra en pantalla */
-    if ('IntersectionObserver' in window) {
-      var io = new IntersectionObserver(function (entries) {
+    /* móvil: el logo del medio es una manija — arrastrarlo verticalmente
+       corre el límite entre Post y Cine en vivo (--vsplit), como el
+       slider de antes/después de Color, y cruzar el 42%/58% activa
+       el video de ese lado y cambia el título */
+    var mark = $('.door-mark', doors);
+    if (mark) {
+      var dragging = false;
+      var setVSplit = function (pct) {
+        pct = Math.min(80, Math.max(20, pct));
+        doors.style.setProperty('--vsplit', pct + '%');
+        if (pct > 58) activate('post');
+        else if (pct < 42) activate('cine');
+        else deactivate();
+      };
+      var pctFromEvent = function (e) {
+        var b = doors.getBoundingClientRect();
+        return ((e.clientY - b.top) / b.height) * 100;
+      };
+      mark.addEventListener('pointerdown', function (e) {
         if (!mobile.matches) return;
-        entries.forEach(function (e) {
-          var side = e.target === post ? 'post' : 'cine';
-          if (e.isIntersecting && e.intersectionRatio > 0.55) {
-            e.target.classList.add('is-open');
-            mount(e.target, window.PUERTAS[side]);
-          } else {
-            e.target.classList.remove('is-open');
-            unmount(e.target);
-          }
-        });
-      }, { threshold: [0, 0.55, 1] });
-      io.observe(post); io.observe(cine);
+        dragging = true;
+        mark.setPointerCapture(e.pointerId);
+      });
+      mark.addEventListener('pointermove', function (e) {
+        if (!dragging || !mobile.matches) return;
+        setVSplit(pctFromEvent(e));
+      });
+      mark.addEventListener('pointerup', function () { dragging = false; });
+      mark.addEventListener('pointercancel', function () { dragging = false; });
     }
 
     mobile.addEventListener('change', rest);

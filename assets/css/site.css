@@ -730,7 +730,7 @@ body.has-bg .page-intro{ text-shadow:0 2px 14px rgba(0,0,0,.7); }
     position:absolute; top:0; left:0; right:0; bottom:auto;
     height:auto; aspect-ratio:16/9; overflow:hidden;
   }
-  .proj-still{ transform:scale(1.12); transform-origin:center; }
+  .proj-still{ transform:scale(1.12); transform-origin:center; clip-path:inset(0); }
   /* degradado suave hacia el negro de abajo, en vez del corte duro */
   .proj-veil{ background:linear-gradient(180deg, rgba(5,5,5,0) 55%, #050505 100%); }
 

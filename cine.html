@@ -15,12 +15,11 @@
 
 <header class="site-nav on-dark">
   <nav class="nav-group left">
-    <a href="index.html" data-i18n="nav.volver">← Home</a>
     <a href="cine.html" aria-current="page" data-i18n="nav.cine">Cine</a>
     <a href="post.html" data-i18n="nav.post">Post</a>
   </nav>
 
-  <img class="nav-logo" src="assets/img/logo.png" alt="Jose Gutierrez-Moyano">
+  <a class="nav-logo" href="index.html"><img src="assets/img/logo.png" alt="Jose Gutierrez-Moyano"></a>
 
   <button class="nav-toggle" aria-expanded="false" data-i18n-label="nav.menu">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
@@ -48,6 +47,9 @@
       </button>
       <button type="button" class="reel-btn" id="reelMuteToggle" data-i18n-label="reel.unmute">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 9v6h4l5 5V4L8 9H4z" fill="currentColor" stroke="none"/><path d="M17 8a5 5 0 0 1 0 8M20 5a9 9 0 0 1 0 14"/></svg>
+      </button>
+      <button type="button" class="reel-btn" id="reelFullscreenToggle" data-i18n-label="reel.fullscreen">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M8 4H5a1 1 0 0 0-1 1v3M16 4h3a1 1 0 0 1 1 1v3M20 16v3a1 1 0 0 1-1 1h-3M4 16v3a1 1 0 0 0 1 1h3"/></svg>
       </button>
     </div>
   </div>

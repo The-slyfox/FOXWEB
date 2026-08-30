@@ -263,6 +263,26 @@
       player.setMuted(muted).catch(function () {});
       syncMute();
     });
+
+    /* pantalla completa — sobre el contenedor del reel, así los
+       controles (play/mute/fullscreen) siguen encima, visibles */
+    var fsBtn = $('#reelFullscreenToggle', host);
+    if (fsBtn) {
+      var syncFs = function () {
+        var isFs = document.fullscreenElement === host;
+        fsBtn.setAttribute('data-i18n-label', isFs ? 'reel.exitfullscreen' : 'reel.fullscreen');
+        window.i18n.apply(fsBtn.parentElement);
+      };
+      syncFs();
+      fsBtn.addEventListener('click', function () {
+        if (document.fullscreenElement) {
+          document.exitFullscreen();
+        } else if (host.requestFullscreen) {
+          host.requestFullscreen();
+        }
+      });
+      document.addEventListener('fullscreenchange', syncFs);
+    }
   }
 
   /* ------------------------------------------------------
@@ -388,8 +408,8 @@
     var el = document.createElement('div');
     el.className = 'ba';
     el.innerHTML =
-      '<img class="before" src="' + esc(pair.antes) + '" alt="">' +
-      '<img class="after" src="' + esc(pair.despues) + '" alt="">' +
+      '<img class="before" src="' + esc(pair.antes) + '" alt="" draggable="false">' +
+      '<img class="after" src="' + esc(pair.despues) + '" alt="" draggable="false">' +
       '<span class="ba-tag l" data-i18n="ba.antes">' + esc(t('ba.antes')) + '</span>' +
       '<span class="ba-tag r" data-i18n="ba.despues">' + esc(t('ba.despues')) + '</span>' +
       '<span class="ba-handle" role="separator" aria-label="' + esc(t('ba.antes')) + ' / ' + esc(t('ba.despues')) + '"></span>';
@@ -399,11 +419,13 @@
       var pct = Math.min(100, Math.max(0, ((clientX - b.left) / b.width) * 100));
       el.style.setProperty('--x', pct + '%');
     };
-    var down = false;
-    el.addEventListener('pointerdown', function (e) { down = true; move(e.clientX); el.setPointerCapture(e.pointerId); });
-    el.addEventListener('pointermove', function (e) { if (down) move(e.clientX); });
-    el.addEventListener('pointerup',   function () { down = false; });
-    el.addEventListener('pointercancel', function () { down = false; });
+    /* desktop (mouse): sigue el cursor con sólo pasar por encima, sin
+       click — evita el click-and-drag que en Mac seleccionaba la
+       imagen por accidente. Mobile/touch: sigue necesitando el dedo
+       encima (pointermove de touch sólo ocurre mientras hay contacto,
+       así que ya funciona como "arrastrar" de forma natural). */
+    el.addEventListener('pointermove', function (e) { move(e.clientX); });
+    el.addEventListener('pointerdown', function (e) { move(e.clientX); });
     return el;
   }
 

@@ -19,6 +19,7 @@ window.I18N = {
     'nav.sobre':     'Sobre mí',
     'nav.contacto':  'Contacto',
     'nav.volver':    '← Home',
+    'foto.volver':   '← Cine',
     'nav.menu':      'Menú',
     'foot.role':     'Cinematógrafo · Fotógrafo · Editor · Colorista',
 
@@ -167,7 +168,9 @@ window.I18N = {
     'reel.pause':     'Pausar',
     'reel.play':      'Reproducir',
     'reel.mute':      'Silenciar',
-    'reel.unmute':    'Activar sonido'
+    'reel.unmute':    'Activar sonido',
+    'reel.fullscreen': 'Pantalla completa',
+    'reel.exitfullscreen': 'Salir de pantalla completa'
   },
 
   en: {
@@ -178,6 +181,7 @@ window.I18N = {
     'nav.sobre':     'About',
     'nav.contacto':  'Contact',
     'nav.volver':    '← Home',
+    'foto.volver':   '← Film',
     'nav.menu':      'Menu',
     'foot.role':     'Cinematographer · Photographer · Editor · Colorist',
 
@@ -312,7 +316,9 @@ window.I18N = {
     'reel.pause':     'Pause',
     'reel.play':      'Play',
     'reel.mute':      'Mute',
-    'reel.unmute':    'Unmute'
+    'reel.unmute':    'Unmute',
+    'reel.fullscreen': 'Fullscreen',
+    'reel.exitfullscreen': 'Exit fullscreen'
   }
 };
 

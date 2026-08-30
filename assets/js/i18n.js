@@ -22,6 +22,7 @@ window.I18N = {
     'foto.volver':   '← Cine',
     'nav.menu':      'Menú',
     'foot.role':     'Cinematógrafo · Fotógrafo · Editor · Colorista',
+    'home.role.rest.mobile': 'Cinematografía · Editor · Colorista',
 
     /* --- sobre mí --- */
     'about.title':   'Sobre mí',
@@ -184,6 +185,7 @@ window.I18N = {
     'foto.volver':   '← Film',
     'nav.menu':      'Menu',
     'foot.role':     'Cinematographer · Photographer · Editor · Colorist',
+    'home.role.rest.mobile': 'Cinematography · Editor · Colorist',
 
     /* --- about --- */
     'about.title':   'About',

@@ -159,7 +159,8 @@
     var roleEl = $('.door-mark .role', doors);
     function setRole(side) {
       if (!roleEl) return;
-      roleEl.setAttribute('data-i18n', side ? 'home.role.' + side : 'foot.role');
+      var restKey = mobile.matches ? 'home.role.rest.mobile' : 'foot.role';
+      roleEl.setAttribute('data-i18n', side ? 'home.role.' + side : restKey);
       window.i18n.apply(roleEl.parentElement);
     }
 
@@ -187,7 +188,6 @@
       setRole(side);
     }
     function deactivate() {
-      if (!current) return;
       current = null;
       [post, cine].forEach(function (d) {
         d.classList.remove('is-open', 'is-closed');
@@ -227,8 +227,8 @@
       var setVSplit = function (pct) {
         pct = Math.min(80, Math.max(20, pct));
         doors.style.setProperty('--vsplit', pct + '%');
-        if (pct > 58) activate('post');
-        else if (pct < 42) activate('cine');
+        if (pct > 58) activate('cine');
+        else if (pct < 42) activate('post');
         else deactivate();
       };
       var pctFromEvent = function (e) {

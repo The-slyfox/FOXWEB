@@ -689,8 +689,10 @@ body.has-bg .page-intro{ text-shadow:0 2px 14px rgba(0,0,0,.7); }
   body.home{ height:100vh; overflow:hidden; }
   .doors{ flex-direction:column; --vsplit:50%; }
   .door,.door-post,.door-cine{ width:100%; min-height:0; }
-  .door-post{ height:var(--vsplit); }
-  .door-cine{ height:calc(100% - var(--vsplit)); }
+  /* Cine arriba, Post abajo (al revés que desktop) — --vsplit es
+     siempre el alto de la puerta de ARRIBA, sea cual sea */
+  .door-cine{ order:-1; height:var(--vsplit); }
+  .door-post{ height:calc(100% - var(--vsplit)); }
   .door + .door{ border-left:0; border-top:1px solid var(--line); }
   .door.is-closed .door-label{ position:relative; left:auto; top:auto; transform:none; padding-bottom:24px; }
   .door.is-closed .door-sub{ display:block; }
@@ -700,6 +702,8 @@ body.has-bg .page-intro{ text-shadow:0 2px 14px rgba(0,0,0,.7); }
     pointer-events:auto; touch-action:none; cursor:grab;
   }
   .door-mark img{ width:64px; }
+  .door-mark .who{ white-space:nowrap; font-size:11px; letter-spacing:.1em; }
+  .door-mark .role{ max-width:230px; }
   .home-foot{ height:auto; padding:16px var(--pad); flex-wrap:wrap; gap:14px; }
   .home-foot .hint-desktop{ display:none; }
   .home-foot .hint-mobile{ display:inline; }
@@ -719,6 +723,14 @@ body.has-bg .page-intro{ text-shadow:0 2px 14px rgba(0,0,0,.7); }
   #carrusel .ccard-still{ display:none; }
   #stillsSec.has-stills{ display:block; }
 
+  /* corto en móvil: el fondo ya no se recorta para llenar toda la
+     seccion — se ve el cuadro completo en 16:9, pegado arriba, y el
+     resto (laureles, trailer, stills) sigue abajo sobre fondo sólido */
+  .proj-still, .proj-veil{
+    position:absolute; top:0; left:0; right:0; bottom:auto;
+    height:auto; aspect-ratio:16/9;
+  }
+
   /* corto en móvil: título+nombre primero (sobre el fondo), después
      laureles + trailer (el orden -1 de desktop ya pone .proj-id
      primero — antes se pisaba a propósito, ahora se deja igual) */
@@ -731,7 +743,7 @@ body.has-bg .page-intro{ text-shadow:0 2px 14px rgba(0,0,0,.7); }
   .carousel-nav{ display:none; }
   .laurel-row img{ height:46px; }
   .proj-id{ max-width:100%; padding:0; gap:18px; flex-direction:column; align-items:flex-start; }
-  .proj-poster .art{ height:280px; }
+  .proj-poster .art{ height:160px; }
   .proj-body{ padding-top:56px; }
   .fest{ grid-template-columns:1fr; gap:4px; }
   .about-panel{ padding:28px; border-radius:14px; }

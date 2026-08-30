@@ -742,7 +742,7 @@ body.has-bg .page-intro{ text-shadow:0 2px 14px rgba(0,0,0,.7); }
   .ccard{ width:210px; } .ccard.is-trailer{ width:100%; }
   .carousel-nav{ display:none; }
   .laurel-row img{ height:46px; }
-  .proj-id{ max-width:100%; padding:0; gap:18px; flex-direction:column; align-items:flex-start; }
+  .proj-id{ max-width:100%; padding:0; gap:16px; flex-direction:row; align-items:flex-end; }
   .proj-poster .art{ height:160px; }
   .proj-body{ padding-top:56px; }
   .fest{ grid-template-columns:1fr; gap:4px; }

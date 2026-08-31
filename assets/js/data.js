@@ -79,7 +79,7 @@ window.CORTOS = [
     poster: 'assets/img/poster-no-drugs-no-dancing.jpg',
     pagina: 'no-drugs-no-dancing.html',
     anio: '2020',
-    puerta: 'cine',
+    puerta: 'ambas',
     roles: ['role.cinematografo', 'role.colorista']
   },
   {
@@ -88,7 +88,7 @@ window.CORTOS = [
     poster: 'assets/img/poster-their-circle.jpg',
     pagina: 'their-circle.html',
     anio: '2020',
-    puerta: 'cine',
+    puerta: 'ambas',
     roles: ['role.cinematografo', 'role.colorista']
   }
 ];

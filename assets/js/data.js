@@ -208,21 +208,68 @@ window.POST_COLOR = [
          null = todavía sin clasificar (aparece en "Todas")
    --------------------------------------------------------- */
 window.FOTO_CATEGORIAS = [
-  { key: 'retrato',   i18n: 'cat.retrato',   cover: 'assets/img/photo-umai-2.jpg' },
-  { key: 'producto',  i18n: 'cat.producto',  cover: 'assets/img/photo-praline-1.jpg' },
-  { key: 'lifestyle', i18n: 'cat.lifestyle', cover: 'assets/img/photo-uumbal-3.jpg' },
-  { key: 'detras',    i18n: 'cat.detras',    cover: 'assets/img/photo-uumbal-1.jpg' }
+  { key: 'retrato',   i18n: 'cat.retrato',   cover: 'assets/img/foto-retrato-1.jpg' },
+  { key: 'producto',  i18n: 'cat.producto',  cover: 'assets/img/foto-producto-1.jpg' },
+  { key: 'lifestyle', i18n: 'cat.lifestyle', cover: 'assets/img/foto-lifestyle-1.jpg' },
+  { key: 'detras',    i18n: 'cat.detras',    cover: 'assets/img/foto-detras-1.jpg' }
 ];
 
 window.FOTOS = [
-  { src: 'assets/img/photo-umai-1.jpg',    alt: 'UMAI',    cat: null, alto: 'tall' },
-  { src: 'assets/img/photo-praline-1.jpg', alt: 'Praline', cat: null },
-  { src: 'assets/img/photo-uumbal-1.jpg',  alt: 'Uumbal',  cat: null },
-  { src: 'assets/img/photo-umai-2.jpg',    alt: 'UMAI',    cat: null, alto: 'tall' },
-  { src: 'assets/img/photo-praline-2.jpg', alt: 'Praline', cat: null },
-  { src: 'assets/img/photo-uumbal-2.jpg',  alt: 'Uumbal',  cat: null, alto: 'tall' },
-  { src: 'assets/img/photo-umai-3.jpg',    alt: 'UMAI',    cat: null },
-  { src: 'assets/img/photo-uumbal-3.jpg',  alt: 'Uumbal',  cat: null }
+  { src: 'assets/img/foto-retrato-1.jpg', alt: 'Retrato', cat: 'retrato', alto: 'tall' },
+  { src: 'assets/img/foto-retrato-2.jpg', alt: 'Retrato', cat: 'retrato', alto: 'tall' },
+  { src: 'assets/img/foto-retrato-3.jpg', alt: 'Retrato', cat: 'retrato', alto: 'tall' },
+  { src: 'assets/img/foto-retrato-4.jpg', alt: 'Retrato', cat: 'retrato' },
+  { src: 'assets/img/foto-retrato-5.jpg', alt: 'Retrato', cat: 'retrato', alto: 'tall' },
+  { src: 'assets/img/foto-retrato-6.jpg', alt: 'Retrato', cat: 'retrato', alto: 'tall' },
+
+  { src: 'assets/img/foto-producto-1.jpg',  alt: 'Producto y marca', cat: 'producto', alto: 'tall' },
+  { src: 'assets/img/foto-producto-2.jpg',  alt: 'Producto y marca', cat: 'producto', alto: 'tall' },
+  { src: 'assets/img/foto-producto-3.jpg',  alt: 'Producto y marca', cat: 'producto', alto: 'tall' },
+  { src: 'assets/img/foto-producto-4.jpg',  alt: 'Producto y marca', cat: 'producto', alto: 'tall' },
+  { src: 'assets/img/foto-producto-5.jpg',  alt: 'Producto y marca', cat: 'producto', alto: 'tall' },
+  { src: 'assets/img/foto-producto-6.jpg',  alt: 'Producto y marca', cat: 'producto', alto: 'tall' },
+  { src: 'assets/img/foto-producto-7.jpg',  alt: 'Producto y marca', cat: 'producto', alto: 'tall' },
+  { src: 'assets/img/foto-producto-8.jpg',  alt: 'Producto y marca', cat: 'producto', alto: 'tall' },
+  { src: 'assets/img/foto-producto-9.jpg',  alt: 'Producto y marca', cat: 'producto', alto: 'tall' },
+  { src: 'assets/img/foto-producto-10.jpg', alt: 'Producto y marca', cat: 'producto', alto: 'tall' },
+  { src: 'assets/img/foto-producto-11.jpg', alt: 'Producto y marca', cat: 'producto', alto: 'tall' },
+  { src: 'assets/img/foto-producto-12.jpg', alt: 'Producto y marca', cat: 'producto', alto: 'tall' },
+  { src: 'assets/img/foto-producto-13.jpg', alt: 'Producto y marca', cat: 'producto', alto: 'tall' },
+  { src: 'assets/img/foto-producto-14.jpg', alt: 'Producto y marca', cat: 'producto', alto: 'tall' },
+  { src: 'assets/img/foto-producto-15.jpg', alt: 'Producto y marca', cat: 'producto' },
+  { src: 'assets/img/foto-producto-16.jpg', alt: 'Producto y marca', cat: 'producto' },
+  { src: 'assets/img/foto-producto-17.jpg', alt: 'Producto y marca', cat: 'producto', alto: 'tall' },
+  { src: 'assets/img/foto-producto-18.jpg', alt: 'Producto y marca', cat: 'producto', alto: 'tall' },
+  { src: 'assets/img/foto-producto-19.jpg', alt: 'Producto y marca', cat: 'producto', alto: 'tall' },
+  { src: 'assets/img/foto-producto-20.jpg', alt: 'Producto y marca', cat: 'producto', alto: 'tall' },
+
+  { src: 'assets/img/foto-lifestyle-1.jpg',  alt: 'Lifestyle', cat: 'lifestyle', alto: 'tall' },
+  { src: 'assets/img/foto-lifestyle-2.jpg',  alt: 'Lifestyle', cat: 'lifestyle', alto: 'tall' },
+  { src: 'assets/img/foto-lifestyle-3.jpg',  alt: 'Lifestyle', cat: 'lifestyle', alto: 'tall' },
+  { src: 'assets/img/foto-lifestyle-4.jpg',  alt: 'Lifestyle', cat: 'lifestyle', alto: 'tall' },
+  { src: 'assets/img/foto-lifestyle-5.jpg',  alt: 'Lifestyle', cat: 'lifestyle', alto: 'tall' },
+  { src: 'assets/img/foto-lifestyle-6.jpg',  alt: 'Lifestyle', cat: 'lifestyle', alto: 'tall' },
+  { src: 'assets/img/foto-lifestyle-7.jpg',  alt: 'Lifestyle', cat: 'lifestyle', alto: 'tall' },
+  { src: 'assets/img/foto-lifestyle-8.jpg',  alt: 'Lifestyle', cat: 'lifestyle', alto: 'tall' },
+  { src: 'assets/img/foto-lifestyle-9.jpg',  alt: 'Lifestyle', cat: 'lifestyle' },
+  { src: 'assets/img/foto-lifestyle-10.jpg', alt: 'Lifestyle', cat: 'lifestyle', alto: 'tall' },
+  { src: 'assets/img/foto-lifestyle-11.jpg', alt: 'Lifestyle', cat: 'lifestyle', alto: 'tall' },
+  { src: 'assets/img/foto-lifestyle-12.jpg', alt: 'Lifestyle', cat: 'lifestyle', alto: 'tall' },
+  { src: 'assets/img/foto-lifestyle-13.jpg', alt: 'Lifestyle', cat: 'lifestyle', alto: 'tall' },
+  { src: 'assets/img/foto-lifestyle-14.jpg', alt: 'Lifestyle', cat: 'lifestyle', alto: 'tall' },
+  { src: 'assets/img/foto-lifestyle-15.jpg', alt: 'Lifestyle', cat: 'lifestyle', alto: 'tall' },
+  { src: 'assets/img/foto-lifestyle-16.jpg', alt: 'Lifestyle', cat: 'lifestyle', alto: 'tall' },
+  { src: 'assets/img/foto-lifestyle-17.jpg', alt: 'Lifestyle', cat: 'lifestyle', alto: 'tall' },
+
+  { src: 'assets/img/foto-detras-1.jpg', alt: 'Detrás de cámara', cat: 'detras', alto: 'tall' },
+  { src: 'assets/img/foto-detras-2.jpg', alt: 'Detrás de cámara', cat: 'detras', alto: 'tall' },
+  { src: 'assets/img/foto-detras-3.jpg', alt: 'Detrás de cámara', cat: 'detras', alto: 'tall' },
+  { src: 'assets/img/foto-detras-4.jpg', alt: 'Detrás de cámara', cat: 'detras' },
+  { src: 'assets/img/foto-detras-5.jpg', alt: 'Detrás de cámara', cat: 'detras', alto: 'tall' },
+  { src: 'assets/img/foto-detras-6.jpg', alt: 'Detrás de cámara', cat: 'detras' },
+  { src: 'assets/img/foto-detras-7.jpg', alt: 'Detrás de cámara', cat: 'detras', alto: 'tall' },
+  { src: 'assets/img/foto-detras-8.jpg', alt: 'Detrás de cámara', cat: 'detras', alto: 'tall' },
+  { src: 'assets/img/foto-detras-9.jpg', alt: 'Detrás de cámara', cat: 'detras' }
 ];
 
 /* ---------------------------------------------------------
@@ -277,7 +324,8 @@ window.PROYECTOS = {
     trailer: { id: 'eFhPxxI-48A', provider: 'youtube' },
     stills: [
       'assets/img/ndnd-still-1.jpg', 'assets/img/ndnd-still-2.jpg',
-      'assets/img/ndnd-still-3.jpg', 'assets/img/ndnd-still-4.jpg'
+      'assets/img/ndnd-still-3.jpg', 'assets/img/ndnd-still-4.jpg',
+      'assets/img/ndnd-still-5.jpg'
     ],
     laureles: [],
     festivales: []

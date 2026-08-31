@@ -735,7 +735,7 @@ body.has-bg .page-intro{ text-shadow:0 2px 14px rgba(0,0,0,.7); }
      laureles + trailer (el orden -1 de desktop ya pone .proj-id
      primero — antes se pisaba a propósito, ahora se deja igual) */
   .proj{
-    min-height:0; padding:calc(var(--nav-h) + 24px) var(--pad) 44px;
+    min-height:0; padding:calc(var(--nav-h) + 24px) var(--pad) 16px;
     flex-direction:column; align-items:stretch; gap:28px;
   }
   .proj-float{ width:100%; max-width:100%; }
@@ -746,7 +746,9 @@ body.has-bg .page-intro{ text-shadow:0 2px 14px rgba(0,0,0,.7); }
      dejando sólo un pelín de superposición del poster, no tapando la foto */
   .proj-id{ max-width:100%; padding:0; gap:16px; flex-direction:row; align-items:flex-end; margin-top:calc(56.25vw - 116px); }
   .proj-poster .art{ height:160px; }
-  .proj-body{ padding-top:56px; }
+  .proj-body{ padding-top:12px; }
+  /* trailer y stills casi pegados en móvil */
+  #stillsSec.has-stills{ padding-top:0; }
   .fest{ grid-template-columns:1fr; gap:4px; }
   .about-panel{ padding:28px; border-radius:14px; }
   .ficha-cols{ grid-template-columns:1fr; }

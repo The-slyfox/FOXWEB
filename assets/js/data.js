@@ -81,6 +81,15 @@ window.CORTOS = [
     anio: '2020',
     puerta: 'cine',
     roles: ['role.cinematografo', 'role.colorista']
+  },
+  {
+    slug: 'their-circle',
+    t: 'Their Circle',
+    poster: 'assets/img/poster-their-circle.jpg',
+    pagina: 'their-circle.html',
+    anio: '2020',
+    puerta: 'cine',
+    roles: ['role.cinematografo', 'role.colorista']
   }
 ];
 
@@ -326,6 +335,17 @@ window.PROYECTOS = {
       'assets/img/ndnd-still-1.jpg', 'assets/img/ndnd-still-2.jpg',
       'assets/img/ndnd-still-3.jpg', 'assets/img/ndnd-still-4.jpg',
       'assets/img/ndnd-still-5.jpg'
+    ],
+    laureles: [],
+    festivales: []
+  },
+  'their-circle': {
+    trailer: { id: '1222852542' },
+    stills: [
+      'assets/img/tc-still-1.jpg', 'assets/img/tc-still-2.jpg', 'assets/img/tc-still-3.jpg',
+      'assets/img/tc-still-4.jpg', 'assets/img/tc-still-5.jpg', 'assets/img/tc-still-6.jpg',
+      'assets/img/tc-still-7.jpg', 'assets/img/tc-still-8.jpg', 'assets/img/tc-still-9.jpg',
+      'assets/img/tc-still-10.jpg'
     ],
     laureles: [],
     festivales: []

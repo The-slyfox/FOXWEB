@@ -111,6 +111,9 @@ window.I18N = {
     'f.guion':        'Guion',
     'f.pais':         'País',
     'f.genero':       'Género',
+    'f.produccion':   'Producción',
+    'f.fotocolor':    'Fotografía y Color',
+    'f.ayudantedir':  '1er Asistente de Dirección',
 
     /* --- roles de corto --- */
     'role.foto':      'Fotografía',
@@ -127,6 +130,9 @@ window.I18N = {
     'ndnd.sinopsis':  'Ambientada en un futuro distópico donde los humanos son mascotas de robots. Wallace desafía al sistema y se rebela contra su amo robot, Rupert, a través del baile y el consumo de drogas.',
     'idiotas.sinopsis': 'Sebastián Barragán, un hombre poderoso obsesionado por la culpa, reflexiona sobre el error que lo llevó a la caída: contratar a dos delincuentes incompetentes para robar un negocio local. Lo que comienza como un trabajo aparentemente sencillo se convierte rápidamente en una persecución absurda, un arresto inesperado y el colapso público de un hombre que ya no puede escapar a las consecuencias de su corrupción ni a los fantasmas de su pasado.',
     'ximoquetza.sinopsis': 'Julián, un soldado español durante la caída de Tenochtitlan, logra escapar de una emboscada por parte de guerreros aztecas. Topilli, un anciano curandero del área, rescata a Julián. Él le enseñará a cuestionar todo lo que alguna vez creyó ser verdad y a aprender a fundirse con la naturaleza para evitar ser rastreado por los guerreros que lo buscan para matarlo.',
+
+    /* --- Their Circle --- */
+    'circle.sinopsis': 'Cuando la realidad se vuelve insostenible, la mente es el único escape. Tras cruzar una línea sin retorno contra quien lo excluía, un joven revive sus últimos momentos en un viaje interno, eligiendo el encierro de sus pensamientos sobre el peso irreversible de la verdad.',
 
     /* --- llamadas --- */
     'cta.contacto':   'Contacto',
@@ -267,6 +273,9 @@ window.I18N = {
     'f.guion':        'Writer',
     'f.pais':         'Country',
     'f.genero':       'Genre',
+    'f.produccion':   'Produced by',
+    'f.fotocolor':    'Cinematography and Color',
+    'f.ayudantedir':  '1st Assistant Director',
 
     'role.foto':      'Cinematography',
     'role.edicion':   'Editing',
@@ -280,6 +289,7 @@ window.I18N = {
     'ndnd.sinopsis':  'Set in a dystopian future, in which humans are pets to robots. Wallace defies the establishment and rebels against his robot overlord Rupert through the act of dance and the consumption of drugs.',
     'idiotas.sinopsis': 'Sebastián Barragán, a powerful man consumed by guilt, reflects on the mistake that led to his downfall: hiring two incompetent criminals to rob a local business. What begins as a seemingly simple job quickly spirals into an absurd chase, an unexpected arrest, and the public collapse of a man who can no longer escape the consequences of his corruption or the ghosts of his past.',
     'ximoquetza.sinopsis': 'Julian, a Spanish soldier during the fall of Tenochtitlan, manages to escape from an ambush by Aztec warriors. Topilli, an old healer from the area, rescues Julian. He will teach him to question everything he once believed to be true and to learn to blend in with nature to avoid being tracked by the warriors seeking to kill him.',
+    'circle.sinopsis': "When reality becomes unbearable, the mind is the only escape. After crossing a point of no return against the one who excluded him, a young man relives his final moments in an inward journey, choosing the confinement of his thoughts over the irreversible weight of the truth.",
 
     'cta.contacto':   'Contact',
     'cta.ver':        'View',

@@ -247,7 +247,18 @@ body.home .site-nav{ position:relative; flex:none; }
   width:100vw; height:56.25vw; min-height:100%; min-width:177.78vh;
   transform:translate(-50%,-50%); border:0;
 }
-.reel:fullscreen{ max-height:none; aspect-ratio:auto; width:100vw; height:100vh; margin-top:0; }
+/* pantalla completa: el reel siempre es 16:9 real — se ve completo con
+   barras negras a los costados o arriba/abajo según la pantalla, nunca
+   recortado ni estirado */
+.reel:fullscreen{
+  max-height:none; aspect-ratio:auto; width:100vw; height:100vh; margin-top:0;
+  display:flex; align-items:center; justify-content:center; background:#000;
+}
+.reel:fullscreen iframe{
+  position:static; transform:none;
+  width:min(100vw, 177.78vh); height:min(100vh, 56.25vw);
+  min-width:0; min-height:0;
+}
 .reel-tag{
   position:absolute; left:var(--pad); bottom:28px; z-index:2;
   font-size:11px; font-weight:700; letter-spacing:.22em; text-transform:uppercase;

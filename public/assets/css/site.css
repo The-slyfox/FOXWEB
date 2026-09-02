@@ -701,13 +701,17 @@ body.has-bg .page-intro{ text-shadow:0 2px 14px rgba(0,0,0,.7); }
     padding:18px var(--pad) 0; font-size:13px; text-align:center;
   }
   .site-nav.is-open .nav-group.right{ padding-top:14px; margin-top:4px; border-top:1px solid var(--line); }
+  /* posición fija en la esquina — así nunca participa del flujo/wrap
+     del menú (eso dejaba un hueco cuando se abría) */
   .nav-toggle{
-    display:flex; margin-left:auto; width:34px; height:34px;
-    align-items:center; justify-content:center;
+    display:flex; position:absolute; right:var(--pad); top:calc(var(--nav-h) / 2); transform:translateY(-50%);
+    width:34px; height:34px; align-items:center; justify-content:center;
   }
   .nav-toggle svg{ width:20px; height:20px; }
-  /* más chico para que no choque con el botón de menú */
-  .nav-logo{ left:var(--pad); width:56px; transform:translateY(-58%); }
+  /* más chico para que no choque con el botón de menú; top fijo en vez
+     de 100% — si no, al abrirse el menú (el nav crece de alto) el logo
+     se iba hasta abajo de todo */
+  .nav-logo{ left:var(--pad); top:var(--nav-h); width:56px; transform:translateY(-58%); }
 
   /* home en mobile: mismo mecanismo que desktop pero en vertical —
      las puertas se apilan y el logo del medio (ahora arrastrable)

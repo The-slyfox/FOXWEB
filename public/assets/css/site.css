@@ -694,7 +694,7 @@ body.has-bg .page-intro{ text-shadow:0 2px 14px rgba(0,0,0,.7); }
   /* los dos <nav> (left/right) se apilan como UN solo bloque centrado,
      en flujo normal — nada de position:absolute con offsets fijos que
      se rompen apenas cambia cuántos links tiene cada grupo */
-  .site-nav.is-open{ flex-wrap:wrap; background:rgba(10,10,10,.97); padding-bottom:20px; }
+  .site-nav.is-open{ flex-wrap:wrap; height:auto; min-height:var(--nav-h); background:rgba(10,10,10,.97); padding-bottom:20px; }
   .site-nav.is-open .nav-group{
     display:flex; flex-direction:column; align-items:center; gap:14px;
     flex-basis:100%; width:100%; position:static;

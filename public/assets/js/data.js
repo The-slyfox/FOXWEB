@@ -111,7 +111,7 @@ window.CINE_SECCIONES = [
     key: 'sec.musical',
     grid: 'vgrid-3',
     videos: [
-      { id: '1212155206', t: 'Pandora — Navidad',                 ratio: '16/9', edited: true },
+      { id: 'HmD3DjJIer0', t: 'Pandora — Navidad',                ratio: '16/9', provider: 'youtube', edited: true },
       { id: 'gEEuDjgozLY', t: 'Alexa Castro — Yo Gané',           ratio: '16/9', provider: 'youtube', edited: true },
       { id: '1113416612', t: 'Un amor de verdad — Live Session',  ratio: '16/9', edited: true },
       // Alto Voltaje siempre al final de esta sección

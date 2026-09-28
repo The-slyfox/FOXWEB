@@ -148,8 +148,8 @@ window.CINE_SECCIONES = [
       { id: '1211855851', t: "Martin's Toys — You Dream It, We Make It",   ratio: '16/9', edited: true },
       { id: '887071439',  t: 'Grupo Cever',                                ratio: '16/9', hash: '1cafe0841d', edited: true },
       { id: '1111146573', t: 'Casa Mexicana de Arte',                      ratio: '16/9', edited: true },
-      { id: '1231030171', t: 'Fundación Carlos Slim — Chihuahua',          ratio: '4/3', edited: true },
-      { id: '1231030172', t: 'Fundación Carlos Slim — San Luis',           ratio: '4/3', edited: true },
+      { id: '1231030171', t: 'Fundación Carlos Slim — Chihuahua',          ratio: '16/9', edited: true },
+      { id: '1231030172', t: 'Fundación Carlos Slim — San Luis',           ratio: '16/9', edited: true },
       // editados por Jose pero no fotografiados/dirigidos por él — sólo en Post
       { id: 'Kx26wjz34P0', t: 'Emprendedores UL — The Future Is Now',      ratio: '16/9', provider: 'youtube', edited: true, onlyPost: true },
       { id: 'UflZBQw62pA', t: 'The Future Is Now — Rafa Herrera Lases',    ratio: '16/9', provider: 'youtube', edited: true, onlyPost: true }

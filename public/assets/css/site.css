@@ -322,6 +322,8 @@ a.short:hover .short-art img, button.short:hover .short-art img{ transform:scale
   font-size:12px; letter-spacing:.03em; text-align:left;
   text-shadow:0 2px 8px rgba(0,0,0,.85);
 }
+/* nota chica al lado del título, ej. "Unidad CDMX" */
+.vnote{ opacity:.55; font-weight:400; }
 /* leve sombra abajo, sólo lo justo para que el título y el play se lean
    sobre cualquier miniatura, sin oscurecer el resto del thumbnail */
 .vcard::after{

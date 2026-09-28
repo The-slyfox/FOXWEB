@@ -75,7 +75,9 @@
     el.innerHTML =
       '<img class="vthumb" alt="" aria-hidden="true">' +
       '<span class="vplay">' + PLAY + '</span>' +
-      '<span class="vcap">' + esc(v.t) + '</span>';
+      '<span class="vcap">' + esc(v.t) +
+        (v.note ? ' <span class="vnote">' + esc(v.note) + '</span>' : '') +
+      '</span>';
 
     loadThumb(v, $('.vthumb', el));
     embedOnClick(el, v);

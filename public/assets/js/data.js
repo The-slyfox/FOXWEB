@@ -114,6 +114,7 @@ window.CINE_SECCIONES = [
       { id: 'HmD3DjJIer0', t: 'Pandora — Navidad',                ratio: '16/9', provider: 'youtube', edited: true },
       { id: 'gEEuDjgozLY', t: 'Alexa Castro — Yo Gané',           ratio: '16/9', provider: 'youtube', edited: true },
       { id: '1113416612', t: 'Un amor de verdad — Live Session',  ratio: '16/9', edited: true },
+      { id: 'b1_V07SeKFY', t: 'Ser de Luz — Iven Off ft María Díaz', ratio: '16/9', provider: 'youtube', note: 'Unidad CDMX' },
       // Alto Voltaje siempre al final de esta sección
       { id: '873832124',  t: 'Alto Voltaje — Nest Feat. Leinaad', ratio: '16/9', hash: '71d43db219', edited: true }
     ]

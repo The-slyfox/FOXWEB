@@ -305,12 +305,14 @@ window.PROYECTOS = {
     ],
     laureles: [
       { src: 'assets/img/laurel-shortsmx.png', alt: 'Shorts México 21 — Official Selection' },
+      { src: 'assets/img/laurel-latoba.png',   alt: 'Official Selection — La Toba International Film Festival 2025' },
       { src: 'assets/img/laurel-stuffmx.png',  alt: 'Official Selection — STUFF MX Film Festival 2026' },
       { src: 'assets/img/laurel-parana.png',   alt: 'Paraná Internacional Films Festival — Competición Oficial 2026' },
       { src: 'assets/img/laurel-fict.png',     alt: 'FICT 2026' }
     ],
     festivales: [
       { nombre: 'Shorts México 21',                  seccion: 'sec.oficial', anio: '2026' },
+      { nombre: 'La Toba International Film Festival', seccion: 'sec.oficial', anio: '2025' },
       { nombre: 'STUFF MX Film Festival',            seccion: 'sec.oficial', anio: '2026' },
       { nombre: 'Paraná Internacional Films Festival', seccion: 'sec.competicion', anio: '2026' },
       { nombre: 'FICT',                              seccion: null,          anio: '2026' }

@@ -619,6 +619,8 @@ body.has-bg .page-intro{ text-shadow:0 2px 14px rgba(0,0,0,.7); }
   padding:16px 18px; font-size:15px; font-weight:600; color:var(--ink);
   border:1px solid var(--accent); border-radius:10px; background:rgba(232,89,12,.12);
 }
+.form-status.is-err{ padding:14px 16px; border:1px solid rgba(255,255,255,.25); border-radius:10px; background:rgba(255,255,255,.05); color:var(--ink); }
+.form-status.is-err a{ color:var(--accent); text-decoration:underline; }
 .form-submit:disabled{ opacity:.6; cursor:wait; }
 
 .contact-alt{

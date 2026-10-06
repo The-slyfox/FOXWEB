@@ -153,6 +153,8 @@ window.I18N = {
     'contact.enviar':      'Enviar',
     'contact.ok':          '✓ ¡Mensaje enviado! Gracias, te respondo pronto.',
     'contact.enviando':    'Enviando…',
+    'contact.error':       'No se pudo enviar el mensaje.',
+    'contact.mailto':      'Abrir en mi correo →',
     'contact.directo':     'Escribime directo',
 
     /* --- pendientes (siempre marcados como tales) --- */
@@ -309,6 +311,8 @@ window.I18N = {
     'contact.enviar':      'Send',
     'contact.ok':          '✓ Message sent! Thanks, I\'ll get back to you soon.',
     'contact.enviando':    'Sending…',
+    'contact.error':       'The message could not be sent.',
+    'contact.mailto':      'Open in my email app →',
     'contact.directo':     'Email me directly',
 
     'p.pendiente':    'Pending',

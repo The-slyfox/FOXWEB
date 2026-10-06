@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/site.css?v=1791266878">
+<link rel="stylesheet" href="assets/css/site.css?v=1791267062">
 </head>
 <body class="page has-bg">
 
@@ -108,9 +108,9 @@
   </span>
 </footer>
 
-<script src="assets/js/i18n.js?v=1791266878"></script>
-<script src="assets/js/data.js?v=1791266878"></script>
-<script src="assets/js/site.js?v=1791266878"></script>
+<script src="assets/js/i18n.js?v=1791267062"></script>
+<script src="assets/js/data.js?v=1791267062"></script>
+<script src="assets/js/site.js?v=1791267062"></script>
 <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 <script>
 /* Envío por AJAX a Formspree; si falla (sin internet, límite del plan…)
@@ -142,12 +142,19 @@
       form.reset();
       status.scrollIntoView({ behavior: 'smooth', block: 'center' });
       btn.disabled = false; label.textContent = window.i18n.t('contact.enviar');
-    }).catch(function () {
+    }).catch(function (err) {
       btn.disabled = false; label.textContent = labelOrig;
+      console.error('Formspree fallo:', err);
       var subject = 'Proyecto — ' + (data.tipo || '');
       var body = 'Nombre: ' + data.nombre + '\nEmail: ' + data.email + '\n\n' + data.mensaje;
-      location.href = 'mailto:jgutimoyan@gmail.com,the.slyfox.project@gmail.com' +
+      var href = 'mailto:jgutimoyan@gmail.com,the.slyfox.project@gmail.com' +
         '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+      status.className = 'form-status is-err';
+      status.innerHTML = '';
+      status.appendChild(document.createTextNode(window.i18n.t('contact.error') + ' (' + (err && err.message || err) + ') '));
+      var a = document.createElement('a');
+      a.href = href; a.textContent = window.i18n.t('contact.mailto');
+      status.appendChild(a);
     });
   });
 })();

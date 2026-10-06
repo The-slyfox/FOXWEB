@@ -615,6 +615,11 @@ body.has-bg .page-intro{ text-shadow:0 2px 14px rgba(0,0,0,.7); }
 }
 .form-submit:hover{ background:var(--gold); border-color:var(--gold); color:#0a0a0a; }
 .form-status{ margin-top:16px; font-size:13px; color:var(--ink-2); min-height:1.4em; }
+.form-status.is-ok{
+  padding:16px 18px; font-size:15px; font-weight:600; color:var(--ink);
+  border:1px solid var(--accent); border-radius:10px; background:rgba(232,89,12,.12);
+}
+.form-submit:disabled{ opacity:.6; cursor:wait; }
 
 .contact-alt{
   padding:32px; border:1px solid var(--line); border-radius:16px; background:var(--bg-2);

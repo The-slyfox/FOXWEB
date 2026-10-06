@@ -151,7 +151,8 @@ window.I18N = {
     'contact.tipo.otro':   'Otro',
     'contact.mensaje':     'Contame de tu proyecto',
     'contact.enviar':      'Enviar',
-    'contact.ok':          '¡Gracias! Te respondo pronto.',
+    'contact.ok':          '✓ ¡Mensaje enviado! Gracias, te respondo pronto.',
+    'contact.enviando':    'Enviando…',
     'contact.directo':     'Escribime directo',
 
     /* --- pendientes (siempre marcados como tales) --- */
@@ -306,7 +307,8 @@ window.I18N = {
     'contact.tipo.otro':   'Other',
     'contact.mensaje':     'Tell me about your project',
     'contact.enviar':      'Send',
-    'contact.ok':          'Thanks! I\'ll get back to you soon.',
+    'contact.ok':          '✓ Message sent! Thanks, I\'ll get back to you soon.',
+    'contact.enviando':    'Sending…',
     'contact.directo':     'Email me directly',
 
     'p.pendiente':    'Pending',

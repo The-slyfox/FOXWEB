@@ -308,14 +308,16 @@ window.PROYECTOS = {
       { src: 'assets/img/laurel-latoba.png?v=2',   alt: 'Official Selection — La Toba International Film Festival 2025' },
       { src: 'assets/img/laurel-stuffmx.png?v=2',  alt: 'Official Selection — STUFF MX Film Festival 2026' },
       { src: 'assets/img/laurel-parana.png?v=2',   alt: 'Paraná Internacional Films Festival — Competición Oficial 2026' },
-      { src: 'assets/img/laurel-fict.png?v=2',     alt: 'FICT 2026' }
+      { src: 'assets/img/laurel-fict.png?v=2',     alt: 'FICT 2026' },
+      { src: 'assets/img/laurel-bcff.png?v=2',     alt: 'Official Selection — Begur Comedy Film Fest 2026' }
     ],
     festivales: [
       { nombre: 'Shorts México 21',                  seccion: 'sec.oficial', anio: '2026' },
       { nombre: 'La Toba International Film Festival', seccion: 'sec.oficial', anio: '2025' },
       { nombre: 'STUFF MX Film Festival',            seccion: 'sec.oficial', anio: '2026' },
       { nombre: 'Paraná Internacional Films Festival', seccion: 'sec.competicion', anio: '2026' },
-      { nombre: 'FICT',                              seccion: null,          anio: '2026' }
+      { nombre: 'FICT',                              seccion: null,          anio: '2026' },
+      { nombre: 'Begur Comedy Film Fest',            seccion: 'sec.oficial', anio: '2026' }
     ]
   },
   'ximoquetza': {

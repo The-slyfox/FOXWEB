@@ -598,16 +598,19 @@
         : '';
     }
 
-    /* laureles: máximo 5 arriba, la fila envuelve */
+    /* laureles: todos los que haya, la fila envuelve. "+ los que caigan"
+       sólo si el corto ya tiene al menos uno (sin festivales no se muestra) */
     var lr = $('#laureles');
     if (lr) {
       lr.innerHTML = '';
-      p.laureles.slice(0, 5).forEach(function (l) {
+      p.laureles.forEach(function (l) {
         lr.insertAdjacentHTML('beforeend',
           '<img loading="lazy" src="' + esc(l.src) + '" alt="' + esc(l.alt) + '">');
       });
-      lr.insertAdjacentHTML('beforeend',
-        '<span class="laurel-more">' + esc(t('laurel.more')) + '</span>');
+      if (p.laureles.length) {
+        lr.insertAdjacentHTML('beforeend',
+          '<span class="laurel-more">' + esc(t('laurel.more')) + '</span>');
+      }
     }
 
     /* botón "ver trailer" pegado al título — activo sólo si hay trailer.

@@ -342,13 +342,27 @@
     return tag;
   }
 
-  function renderShorts(hostSel, puerta) {
+  function renderShorts(hostSel, puerta, extraFilter) {
     var host = $(hostSel);
     if (!host || !window.CORTOS) return;
     host.innerHTML = '';
+    var n = 0;
     window.CORTOS
       .filter(function (c) { return c.puerta === puerta || c.puerta === 'ambas'; })
-      .forEach(function (c) { host.appendChild(shortCard(c, puerta)); });
+      .filter(function (c) { return !extraFilter || extraFilter(c); })
+      .forEach(function (c) { host.appendChild(shortCard(c, puerta)); n++; });
+    return n;
+  }
+
+  /* Post separa los narrativos en dos grupos: donde Jose fue editor (y colorista)
+     y donde sólo hizo el color. Un grupo vacío esconde su subtítulo. */
+  function renderPostShorts() {
+    var esEditor = function (c) { return !!c.roles && c.roles.indexOf('role.editor') > -1; };
+    var a = renderShorts('#postCortosEdit', 'post', esEditor);
+    var b = renderShorts('#postCortosColor', 'post', function (c) { return !esEditor(c); });
+    var ta = $('#postCortosEditTitle'), tb = $('#postCortosColorTitle');
+    if (ta) ta.hidden = !a;
+    if (tb) tb.hidden = !b;
   }
 
   /* ------------------------------------------------------
@@ -801,7 +815,7 @@
   /* ------------------------------------------------------ */
   function renderAll() {
     renderShorts('#cineCortos', 'cine');
-    renderShorts('#postCortos', 'post');
+    renderPostShorts();
     renderCine();
     renderCats();
     renderPost();

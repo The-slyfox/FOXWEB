@@ -98,6 +98,7 @@ window.I18N = {
     'sec.otros':      'Otros trabajos narrativos',
     'sec.oficial':    'Selección oficial',
     'sec.competicion':'Competición oficial',
+    'sec.nominado':   'Nominado a Mejor Director Debutante (cortometraje, otro idioma)',
     'laurel.more':    '+ los que caigan →',
 
     /* --- ficha técnica --- */
@@ -266,6 +267,7 @@ window.I18N = {
     'sec.otros':      'Other narrative work',
     'sec.oficial':    'Official selection',
     'sec.competicion':'Official competition',
+    'sec.nominado':   'Nominated for Best Debut Director (short film, other language)',
     'laurel.more':    '+ more to come →',
 
     'f.direccion':    'Written, Produced and Directed by',

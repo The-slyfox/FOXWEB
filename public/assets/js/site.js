@@ -748,6 +748,21 @@
       }
     }
 
+    /* premios ganados (no nominaciones): sección propia, sólo si hay alguno */
+    var ph = $('#premios');
+    if (ph) {
+      var pSec = $('#premiosSec');
+      var prem = p.premios || [];
+      ph.innerHTML = '';
+      prem.forEach(function (x) {
+        ph.insertAdjacentHTML('beforeend',
+          '<div class="fest prem"><span class="f-name">' + esc(t(x.premio)) + '</span>' +
+          '<span class="f-sec">' + esc(x.festival) + '</span>' +
+          '<span class="f-year">' + esc(x.anio || '') + '</span></div>');
+      });
+      if (pSec) pSec.style.display = prem.length ? '' : 'none';
+    }
+
     /* otros trabajos narrativos — sólo los demás cortos, con su
        poster completo y en qué sección(es) del sitio aparecen */
     var otros = $('#otros');

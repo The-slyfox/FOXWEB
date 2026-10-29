@@ -310,7 +310,8 @@ window.PROYECTOS = {
       { src: 'assets/img/laurel-parana.png?v=2',   alt: 'Paraná Internacional Films Festival — Competición Oficial 2026' },
       { src: 'assets/img/laurel-fict.png?v=2',     alt: 'FICT 2026' },
       { src: 'assets/img/laurel-bcff.png?v=2',     alt: 'Official Selection — Begur Comedy Film Fest 2026' },
-      { src: 'assets/img/laurel-mkiff.png',      alt: 'Nominated for Best Debut Director, Short Film (Other Language) — Milton Keynes International Film Festival 2026' }
+      { src: 'assets/img/laurel-mkiff.png',      alt: 'Nominated for Best Debut Director, Short Film (Other Language) — Milton Keynes International Film Festival 2026' },
+      { src: 'assets/img/laurel-oklahoma.png',  alt: 'Official Selection — Oklahoma Latin American Film Festival 2026' }
     ],
     festivales: [
       { nombre: 'Shorts México 21',                  seccion: 'sec.oficial', anio: '2026' },
@@ -319,8 +320,14 @@ window.PROYECTOS = {
       { nombre: 'Paraná Internacional Films Festival', seccion: 'sec.competicion', anio: '2026' },
       { nombre: 'FICT',                              seccion: null,          anio: '2026' },
       { nombre: 'Begur Comedy Film Fest',            seccion: 'sec.oficial', anio: '2026' },
-      { nombre: 'Milton Keynes International Film Festival', seccion: 'sec.nominado', anio: '2026' }
+      { nombre: 'Milton Keynes International Film Festival', seccion: 'sec.nominado', anio: '2026' },
+      { nombre: 'Oklahoma Latin American Film Festival', seccion: 'sec.oficial', anio: '2026' }
+    ],
+    // premios ganados (no nominaciones) — se muestran en su propia sección
+    premios: [
+      { premio: 'prem.nacional', festival: 'La Toba International Film Festival', anio: '2025' }
     ]
+
   },
   'ximoquetza': {
     trailer: { id: '1222032706' },

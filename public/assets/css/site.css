@@ -586,6 +586,9 @@ body.has-bg .page-intro{ text-shadow:0 2px 14px rgba(0,0,0,.7); }
 .fest .f-name{ font-weight:600; }
 .fest .f-sec{ color:var(--ink-2); font-size:12.5px; }
 .fest .f-year{ color:var(--ink-3); font-size:12px; letter-spacing:.06em; }
+/* premio ganado: nombre del premio en dorado, con una estrella */
+.fest.prem .f-name{ color:var(--gold); }
+.fest.prem .f-name::before{ content:"★  "; }
 
 /* =========================================================
    CONTACTO

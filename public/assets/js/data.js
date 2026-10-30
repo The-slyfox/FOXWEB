@@ -305,6 +305,7 @@ window.PROYECTOS = {
     ],
     laureles: [
       { src: 'assets/img/laurel-shortsmx.png?v=2', alt: 'Shorts México 21 — Official Selection' },
+      { src: 'assets/img/laurel-latoba-ganador.png', alt: 'Ganador — Festival Internacional de Cine de la Toba 2026 (Mejor cortometraje nacional)' },
       { src: 'assets/img/laurel-latoba.png?v=2',   alt: 'Official Selection — La Toba International Film Festival 2025' },
       { src: 'assets/img/laurel-stuffmx.png?v=2',  alt: 'Official Selection — STUFF MX Film Festival 2026' },
       { src: 'assets/img/laurel-parana.png?v=2',   alt: 'Paraná Internacional Films Festival — Competición Oficial 2026' },

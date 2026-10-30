@@ -325,7 +325,7 @@ window.PROYECTOS = {
     ],
     // premios ganados (no nominaciones) — se muestran en su propia sección
     premios: [
-      { premio: 'prem.nacional', festival: 'La Toba International Film Festival', anio: '2025' }
+      { premio: 'prem.nacional', festival: 'La Toba International Film Festival', anio: '2026' }
     ]
 
   },

@@ -619,7 +619,7 @@
       lr.innerHTML = '';
       p.laureles.forEach(function (l) {
         lr.insertAdjacentHTML('beforeend',
-          '<img loading="lazy" src="' + esc(l.src) + '" alt="' + esc(l.alt) + '">');
+          '<img decoding="async" src="' + esc(l.src) + '" alt="' + esc(l.alt) + '">');
       });
       if (p.laureles.length) {
         lr.insertAdjacentHTML('beforeend',

@@ -304,15 +304,15 @@ window.PROYECTOS = {
       'assets/img/still-4.jpg', 'assets/img/still-5.jpg', 'assets/img/still-6.jpg'
     ],
     laureles: [
-      { src: 'assets/img/laurel-shortsmx.png?v=2', alt: 'Shorts México 21 — Official Selection' },
-      { src: 'assets/img/laurel-latoba-ganador.png', alt: 'Ganador — Festival Internacional de Cine de la Toba 2026 (Mejor cortometraje nacional)' },
-      { src: 'assets/img/laurel-latoba.png?v=2',   alt: 'Official Selection — La Toba International Film Festival 2025' },
-      { src: 'assets/img/laurel-stuffmx.png?v=2',  alt: 'Official Selection — STUFF MX Film Festival 2026' },
-      { src: 'assets/img/laurel-parana.png?v=2',   alt: 'Paraná Internacional Films Festival — Competición Oficial 2026' },
-      { src: 'assets/img/laurel-fict.png?v=2',     alt: 'FICT 2026' },
-      { src: 'assets/img/laurel-bcff.png?v=2',     alt: 'Official Selection — Begur Comedy Film Fest 2026' },
-      { src: 'assets/img/laurel-mkiff.png',      alt: 'Nominated for Best Debut Director, Short Film (Other Language) — Milton Keynes International Film Festival 2026' },
-      { src: 'assets/img/laurel-oklahoma.png',  alt: 'Official Selection — Oklahoma Latin American Film Festival 2026' }
+      { src: 'assets/img/laurel-shortsmx.png?v=3', alt: 'Shorts México 21 — Official Selection' },
+      { src: 'assets/img/laurel-latoba-ganador.png?v=3', alt: 'Ganador — Festival Internacional de Cine de la Toba 2026 (Mejor cortometraje nacional)' },
+      { src: 'assets/img/laurel-latoba.png?v=3',   alt: 'Official Selection — La Toba International Film Festival 2025' },
+      { src: 'assets/img/laurel-stuffmx.png?v=3',  alt: 'Official Selection — STUFF MX Film Festival 2026' },
+      { src: 'assets/img/laurel-parana.png?v=3',   alt: 'Paraná Internacional Films Festival — Competición Oficial 2026' },
+      { src: 'assets/img/laurel-fict.png?v=3',     alt: 'FICT 2026' },
+      { src: 'assets/img/laurel-bcff.png?v=3',     alt: 'Official Selection — Begur Comedy Film Fest 2026' },
+      { src: 'assets/img/laurel-mkiff.png?v=3',      alt: 'Nominated for Best Debut Director, Short Film (Other Language) — Milton Keynes International Film Festival 2026' },
+      { src: 'assets/img/laurel-oklahoma.png?v=3',  alt: 'Official Selection — Oklahoma Latin American Film Festival 2026' }
     ],
     festivales: [
       { nombre: 'Shorts México 21',                  seccion: 'sec.oficial', anio: '2026' },

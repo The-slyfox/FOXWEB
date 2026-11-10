@@ -112,7 +112,7 @@ window.CINE_SECCIONES = [
     grid: 'vgrid-3',
     videos: [
       // orden: del más nuevo al más viejo (fecha de publicación)
-      { id: 'AaWCj-YCVOI', t: 'Joss — Lo Que Más Quiero',          ratio: '16/9', provider: 'youtube', edited: true },                // oct 2026
+      { id: 'AaWCj-YCVOI', t: 'Joss — Lo Que Más Quiero',          ratio: '16/9', provider: 'youtube', thumb: 'assets/img/thumb-joss-lqmq-2.jpg', edited: true },                // oct 2026
       { id: 'gEEuDjgozLY', t: 'Alexa Castro — Yo Gané',           ratio: '16/9', provider: 'youtube', edited: true },                // sep 2026
       { id: 'HmD3DjJIer0', t: 'Pandora — Navidad',                ratio: '16/9', provider: 'youtube', edited: true },                // nov 2025
       { id: '1113416612', t: 'Un amor de verdad — Live Session',  ratio: '16/9', edited: true },                                    // ago 2025

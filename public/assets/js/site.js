@@ -39,6 +39,12 @@
 
   /* miniatura: oEmbed de Vimeo, o el thumbnail directo de YouTube */
   function loadThumb(v, img) {
+    /* miniatura propia (campo `thumb` del video) en vez de la automática */
+    if (v.thumb) {
+      img.onload = function () { img.classList.add('is-loaded'); };
+      img.src = v.thumb;
+      return;
+    }
     if (isYouTube(v)) {
       img.onload = function () { img.classList.add('is-loaded'); };
       img.src = 'https://img.youtube.com/vi/' + encodeURIComponent(v.id) + '/hqdefault.jpg';

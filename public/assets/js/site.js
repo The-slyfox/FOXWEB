@@ -625,7 +625,8 @@
       lr.innerHTML = '';
       p.laureles.forEach(function (l) {
         lr.insertAdjacentHTML('beforeend',
-          '<img decoding="async" src="' + esc(l.src) + '" alt="' + esc(l.alt) + '">');
+          '<img decoding="async" src="' + esc(l.src) + '" alt="' + esc(l.alt) + '"' +
+          (l.k ? ' style="--k:' + l.k + '"' : '') + '>');
       });
       if (p.laureles.length) {
         lr.insertAdjacentHTML('beforeend',

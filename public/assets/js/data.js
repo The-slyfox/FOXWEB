@@ -45,7 +45,7 @@ window.CORTOS = [
   {
     slug: 'los-idiotas',
     t: 'Los Idiotas',
-    poster: 'assets/img/poster-idiotas-3.jpg',
+    poster: 'assets/img/poster-idiotas-4.jpg',
     pagina: 'los-idiotas.html',
     anio: '2026',
     puerta: 'ambas',
@@ -313,7 +313,8 @@ window.PROYECTOS = {
       { src: 'assets/img/laurel-fict.png?v=3',     alt: 'FICT 2026' },
       { src: 'assets/img/laurel-bcff.png?v=3',     alt: 'Official Selection — Begur Comedy Film Fest 2026' },
       { src: 'assets/img/laurel-mkiff.png?v=3',      alt: 'Nominated for Best Debut Director, Short Film (Other Language) — Milton Keynes International Film Festival 2026' },
-      { src: 'assets/img/laurel-oklahoma.png?v=3',  alt: 'Official Selection — Oklahoma Latin American Film Festival 2026' }
+      { src: 'assets/img/laurel-oklahoma.png?v=3',  alt: 'Official Selection — Oklahoma Latin American Film Festival 2026' },
+      { src: 'assets/img/laurel-fictukuru.png?v=3',  alt: 'Selección oficial — FICTUKURU 12, Festival Internacional de Cine Tukuru 2026' }
     ],
     festivales: [
       { nombre: 'Shorts México 21',                  seccion: 'sec.oficial', anio: '2026' },
@@ -323,7 +324,8 @@ window.PROYECTOS = {
       { nombre: 'FICT',                              seccion: null,          anio: '2026' },
       { nombre: 'Begur Comedy Film Fest',            seccion: 'sec.oficial', anio: '2026' },
       { nombre: 'Milton Keynes International Film Festival', seccion: 'sec.nominado', anio: '2026' },
-      { nombre: 'Oklahoma Latin American Film Festival', seccion: 'sec.oficial', anio: '2026' }
+      { nombre: 'Oklahoma Latin American Film Festival', seccion: 'sec.oficial', anio: '2026' },
+      { nombre: 'FICTUKURU 12 — Festival Internacional de Cine Tukuru', seccion: 'sec.oficial', anio: '2026' }
     ],
     // premios ganados (no nominaciones) — se muestran en su propia sección
     premios: [

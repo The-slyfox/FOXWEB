@@ -320,7 +320,7 @@ window.PROYECTOS = {
       { nombre: 'Shorts México 21',                  seccion: 'sec.oficial', anio: '2026' },
       { nombre: 'STUFF MX Film Festival',            seccion: 'sec.oficial', anio: '2026' },
       { nombre: 'Paraná Internacional Films Festival', seccion: 'sec.competicion', anio: '2026' },
-      { nombre: 'FICT',                              seccion: null,          anio: '2026' },
+      { nombre: 'FICT',                              seccion: 'sec.oficial', anio: '2026' },
       { nombre: 'Begur Comedy Film Fest',            seccion: 'sec.oficial', anio: '2026' },
       { nombre: 'Oklahoma Latin American Film Festival', seccion: 'sec.oficial', anio: '2026' },
       { nombre: 'FICTUKURU 12 — Festival Internacional de Cine Tukuru', seccion: 'sec.oficial', anio: '2026' },

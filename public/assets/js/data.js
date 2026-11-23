@@ -45,7 +45,7 @@ window.CORTOS = [
   {
     slug: 'los-idiotas',
     t: 'Los Idiotas',
-    poster: 'assets/img/poster-idiotas-4.jpg',
+    poster: 'assets/img/poster-idiotas-5.jpg',
     pagina: 'los-idiotas.html',
     anio: '2026',
     puerta: 'ambas',

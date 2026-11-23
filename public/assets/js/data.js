@@ -311,7 +311,7 @@ window.PROYECTOS = {
       { src: 'assets/img/laurel-parana.png?v=3',   alt: 'Paraná Internacional Films Festival — Competición Oficial 2026', k: 1.07 },
       { src: 'assets/img/laurel-fict.png?v=3',     alt: 'FICT 2026', k: 1.08 },
       { src: 'assets/img/laurel-bcff.png?v=3',     alt: 'Official Selection — Begur Comedy Film Fest 2026', k: 1.17 },
-      { src: 'assets/img/laurel-mkiff.png?v=3',      alt: 'Nominated for Best Debut Director, Short Film (Other Language) — Milton Keynes International Film Festival 2026', k: 1.2 },
+      { src: 'assets/img/laurel-mkiff.png?v=4',      alt: 'Winner — Best Debut Director, Short Film (Other Language) — Milton Keynes International Film Festival 2026', k: 1.2 },
       { src: 'assets/img/laurel-oklahoma.png?v=3',  alt: 'Official Selection — Oklahoma Latin American Film Festival 2026', k: 1.07 },
       { src: 'assets/img/laurel-fictukuru.png?v=3',  alt: 'Selección oficial — FICTUKURU 12, Festival Internacional de Cine Tukuru 2026', k: 1.03 },
       { src: 'assets/img/laurel-fenacir.png?v=3',     alt: 'Selección oficial — FENACIR Distribución, Cortometrajes 2027' }
@@ -322,14 +322,14 @@ window.PROYECTOS = {
       { nombre: 'Paraná Internacional Films Festival', seccion: 'sec.competicion', anio: '2026' },
       { nombre: 'FICT',                              seccion: null,          anio: '2026' },
       { nombre: 'Begur Comedy Film Fest',            seccion: 'sec.oficial', anio: '2026' },
-      { nombre: 'Milton Keynes International Film Festival', seccion: 'sec.nominado', anio: '2026' },
       { nombre: 'Oklahoma Latin American Film Festival', seccion: 'sec.oficial', anio: '2026' },
       { nombre: 'FICTUKURU 12 — Festival Internacional de Cine Tukuru', seccion: 'sec.oficial', anio: '2026' },
       { nombre: 'FENACIR Distribución — Cortometrajes', seccion: 'sec.oficial', anio: '2027' }
     ],
     // premios ganados (no nominaciones) — se muestran en su propia sección
     premios: [
-      { premio: 'prem.nacional', festival: 'La Toba International Film Festival', anio: '2026' }
+      { premio: 'prem.nacional', festival: 'La Toba International Film Festival', anio: '2026' },
+      { premio: 'prem.debutante', festival: 'Milton Keynes International Film Festival', anio: '2026' }
     ]
 
   },

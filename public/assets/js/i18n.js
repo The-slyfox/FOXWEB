@@ -101,6 +101,7 @@ window.I18N = {
     'sec.otros':      'Otros trabajos narrativos',
     'sec.oficial':    'Selección oficial',
     'sec.competicion':'Competición oficial',
+    'sec.premier':    'Selección oficial · Premier nacional',
     'laurel.more':    '+ los que caigan →',
 
     /* --- ficha técnica --- */
@@ -273,6 +274,7 @@ window.I18N = {
     'sec.otros':      'Other narrative work',
     'sec.oficial':    'Official selection',
     'sec.competicion':'Official competition',
+    'sec.premier':    'Official selection · National premiere',
     'laurel.more':    '+ more to come →',
 
     'f.direccion':    'Written, Produced and Directed by',
